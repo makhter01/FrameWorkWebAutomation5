@@ -28,11 +28,14 @@ $ Bug defects log software tool---JIRA
 # References Resources
 - JIRA tool 
 $ https://www.youtube.com/watch?v=UHcfYoIvpPg
+
 - GitHub
 $ https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 $ https://github.com/mhasan90/AwesomeGroupFive
+
 - Selenium Java API
 $ https://seleniumhq.github.io/selenium/docs/api/java/
+
 - TestNG API
 $ https://jitpack.io/com/github/cbeust/testng/master/javadoc/
 
