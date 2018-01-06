@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ebay Automation Test" parallel="false">
+
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="os" value="Windows"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="url" value="https://www.ebay.com/"/>
+
+
+    <test name = "ebay Home">
+        <classes>
+            <!--<class name="testcases.TestSearchBar"/>-->
+            <!--<class name="testcases.TestSearchItemPage"/>-->
+            <class name="testcases.TestSignIn"/>
+        </classes>
+    </test>
+
+</suite>
