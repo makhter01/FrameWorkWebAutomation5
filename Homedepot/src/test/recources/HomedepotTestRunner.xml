@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Homedepot " parallel="false">
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="os" value="mac"/>
+    <parameter name="url" value="https://www.homedepot.com/"/>
+
+    <test name="Automation" >
+        <classes>
+            <class name="testcases.HomepageTest" />
+            <class name="testcases.HomepageTest" />
+
+            <class name="testseachItem.SearchBarTest" />
+            <class name="testcases.HomepageTest" />
+
+        </classes>
+    </test>
+
+</suite>
