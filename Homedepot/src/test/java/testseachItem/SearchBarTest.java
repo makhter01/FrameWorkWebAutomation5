@@ -14,6 +14,6 @@ public class SearchBarTest extends Home {
     @Test
     public void testHome() throws InterruptedException{
         searchBar();
-        sleepFor(30);
+        sleepFor(1);
     }
 }

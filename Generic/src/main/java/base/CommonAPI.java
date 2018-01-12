@@ -1,5 +1,7 @@
 package base;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
@@ -16,6 +18,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import reporting.ExtentManager;
+import reporting.ExtentTestManger;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -30,13 +34,64 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class CommonAPI {
+import static reporting.ExtentTestManger.startTest;
 
+public class CommonAPI {
+    public static ExtentReports extent;
+    @BeforeSuite
+    public void extentSetup(ITestContext context) {
+        ExtentManager.setOutputDirectory(context);
+        extent = ExtentManager.getInstance();
+    }
+    @BeforeMethod
+    public void startExtent(Method method) {
+        String className = method.getDeclaringClass().getSimpleName();
+        String methodName = method.getName().toLowerCase();
+        ExtentTestManger.startTest(method.getName());
+        ExtentTestManger.getTest().assignCategory(className);
+    }
+    protected String getStackTrace(Throwable t) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        t.printStackTrace(pw);
+        return sw.toString();
+    }
+    @AfterMethod
+    public void afterEachTestMethod(ITestResult result) {
+        ExtentTestManger.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));
+        ExtentTestManger.getTest().getTest().setEndedTime(getTime(result.getEndMillis()));
+
+        for (String group : result.getMethod().getGroups()) {
+            ExtentTestManger.getTest().assignCategory(group);
+        }
+        if (result.getStatus() == 1) {
+           ExtentTestManger.getTest().log(LogStatus.PASS, "Test Passed");
+        } else if (result.getStatus() == 2) {
+           ExtentTestManger.getTest().log(LogStatus.FAIL, getStackTrace(result.getThrowable()));
+        } else if (result.getStatus() == 3) {
+           ExtentTestManger.getTest().log(LogStatus.SKIP, "Test Skipped");
+        }
+      ExtentTestManger.endTest();
+        extent.flush();
+        if (result.getStatus() == ITestResult.FAILURE) {
+            captureScreenshot(driver, result.getName());
+        }
+       driver.quit();
+    }
+    @AfterSuite
+    public void generateReport() {
+        extent.close();
+    }
+    private Date getTime(long millis) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(millis);
+        return calendar.getTime();
+    }
     public static WebDriver driver = null;
     private String saucelabs_username = "mrahman";
-    private String browserstack_username = "matiurrahman3";
+    private String browserstack_username = "satinder6";
     private String saucelabs_accesskey = "ssh key";
-    private String browserstack_accesskey = "V66sY7ZtcQFksB1YC14z";
+    private String browserstack_accesskey = "wxYyoFEqPUnGWzdey1Th";
 
     @Parameters({"useCloudEnv","cloudEnvName","os","os_version","browserName","browserVersion","url"})
     @BeforeMethod
@@ -78,7 +133,6 @@ public class CommonAPI {
             driver = new InternetExplorerDriver();
         }
         return driver;
-
     }
     public WebDriver getLocalGridDriver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
@@ -95,8 +149,8 @@ public class CommonAPI {
     }
 
     public WebDriver getCloudDriver(String envName,String envUsername, String envAccessKey,String os, String os_version,String browserName,
-                                    String browserVersion)throws IOException {
-
+                                    String browserVersion)throws IOException
+    {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("browser",browserName);
         cap.setCapability("browser_version",browserVersion);
@@ -112,10 +166,10 @@ public class CommonAPI {
         }
         return driver;
     }
-
     @AfterMethod
     public static void cleanUp(){
-        driver.close();
+
+        driver.quit();
     }
     public void clickByCss(String locator) {
         driver.findElement(By.cssSelector(locator)).click();
@@ -171,6 +225,11 @@ public class CommonAPI {
     public String  getCurrentPageUrl(){
         String url = driver.getCurrentUrl();
         return url;
+    }
+    // Added New Method here
+    public String getCurrentPageTitle(){
+        String title = driver.getTitle();
+        return title;
     }
     public void navigateBack(){
         driver.navigate().back();
@@ -274,7 +333,6 @@ public class CommonAPI {
         } catch (Exception e) {
             System.out.println("Exception while taking screenshot "+e.getMessage());;
         }
-
     }
     //Taking Screen shots
     public void takeScreenShot()throws IOException {

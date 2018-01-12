@@ -1,14 +1,9 @@
 package testcases;
 
 import Homedepot_pages.Home;
-import base.CommonAPI;
-import org.openqa.selenium.UnhandledAlertException;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class HomepageTest extends CommonAPI {
+public class HomepageTest extends Home{
     @Test
     public void verifyPageTitle() throws InterruptedException {
         String title = driver.getTitle();
@@ -17,8 +12,7 @@ public class HomepageTest extends CommonAPI {
         } else {
             System.out.println("1st verification failed");
         }
-        sleepFor(10);
-
+        sleepFor(1);
     }
 
     @Test
@@ -29,19 +23,14 @@ public class HomepageTest extends CommonAPI {
         } else {
             System.out.println("second verification failed");
         }
-        sleepFor(30);
-
-
+        sleepFor(1);
     }
 
     @Test
     public void checkAccountButton() {
-        Home account = new Home();
-        account.clickAccount();
+       clickAccount();
 
     }
-
-
 }
 
 

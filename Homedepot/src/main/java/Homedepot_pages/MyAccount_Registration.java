@@ -8,6 +8,7 @@ import org.openqa.selenium.support.How;
 public class MyAccount_Registration extends CommonAPI {
 
     public void clickAccountButton() {
+
         clickByCss("#headerMyAccountTitle");
     }
 }
