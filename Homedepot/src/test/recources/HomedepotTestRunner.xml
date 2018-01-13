@@ -1,19 +1,23 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Homedepot " parallel="false">
+<suite name="Homedepot Automation Test" parallel="false">
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="browserstack"/>
+    <parameter name="os" value="Windows"/>
+    <parameter name="os_version" value="High Sierra"/>
     <parameter name="browserName" value="chrome"/>
-    <parameter name="os" value="mac"/>
+    <parameter name="browserVersion" value="63.0"/>
     <parameter name="url" value="https://www.homedepot.com/"/>
-
-    <test name="Automation" >
+    <test name = "HomeDepot HomepageTest">
         <classes>
-            <class name="testcases.HomepageTest" />
-            <class name="testcases.HomepageTest" />
-
-            <class name="testseachItem.SearchBarTest" />
-            <class name="testcases.HomepageTest" />
+            <class name="testcases.HomepageTest"/>
+            <!--<class name="testcustomerfunc.MyAccountTest"/>-->
+            <!--<class name="testcustomerfunc.SignInTest"/>-->
+            <!--<class name="testcases.SearchIteamByExcelTest"/>-->
 
         </classes>
     </test>
-
 </suite>
+
+
