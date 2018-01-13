@@ -1,11 +1,9 @@
 package testcases;
 
-import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 import page.Home_Page;
 import page.SamsungTablet;
 
@@ -62,7 +60,7 @@ public class TestHomePage extends Home_Page {
         System.out.println("Verify Electronics Link : " + actualElectronics);
     }
     //  ebay_TC_007 verify existance of Fashion Link on main page
-    @Test(priority = 7,enabled = false)
+    @Test(priority = 7,enabled = true)
     public void testFashionLinkisDislayed() {
         boolean actualFashion = search.isFashionLinkDisplayed();
         Assert.assertEquals(actualFashion, true);

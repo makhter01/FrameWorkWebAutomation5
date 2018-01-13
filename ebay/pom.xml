@@ -26,7 +26,7 @@
                 <version>2.20.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFiles>target/test-classes/ebayTestRunner.xml</suiteXmlFiles>
+                        <suiteXmlFile>target/test-classes/ebayTestRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
