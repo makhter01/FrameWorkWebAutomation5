@@ -4,11 +4,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import page.Home_Page;
 import page.InputExcelSheet;
-import page.SamsungTablet;
 import reporting.TestLogger;
-
 import java.io.IOException;
 
 public class TestInputExcelSheet extends InputExcelSheet {

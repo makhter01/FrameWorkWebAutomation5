@@ -1,14 +1,8 @@
 package page;
 
 import base.CommonAPI;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import utility.DataReader;
-
 import java.io.IOException;
-
-import static org.openqa.selenium.support.How.ID;
-import static org.openqa.selenium.support.How.XPATH;
 
 public class InputExcelSheet extends CommonAPI {
 

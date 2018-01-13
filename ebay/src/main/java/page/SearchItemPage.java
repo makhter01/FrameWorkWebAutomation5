@@ -35,7 +35,7 @@ public class SearchItemPage extends CommonAPI {
         System.out.println("Get Product Search Page Title: " + driver.getTitle());
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         samsungTablet.click();
-       /* addToCart.click();
+       /* addoCart.click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         System.out.println("Get addTocart Page Title: " + driver.getTitle());
         *//*clicktoShoppingCart.click();

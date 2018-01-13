@@ -12,20 +12,19 @@ public class TestSignIn extends SignIn_HomePage {
     SignIn_HomePage signin;
 
     @BeforeMethod
-    public void initialization()
-    {
+    public void initialization() {
         signin = PageFactory.initElements(driver, SignIn_HomePage.class);
     }
 
     //ebay_TC_024 Verification point for SignIn Link
-    @Test(priority = 1)
+    @Test(priority = 1, enabled = false)
     public void testSignIn() throws InterruptedException {
         signin.ClickSignIn();
         Thread.sleep(50);
     }
 
     //ebay_TC_02 Check if emal sign-in box exist
-    @Test(priority = 2)
+    @Test(priority = 2, enabled = true)
     public void testemailSignInBoxEnabled() {
         boolean actualsign = signin.emailSignInBoxEnabled();
         Assert.assertEquals(actualsign, true);
@@ -34,20 +33,20 @@ public class TestSignIn extends SignIn_HomePage {
     }
 
     // ebay_TC_025 signin with valid credentials
-    @Test(priority = 3)
+    @Test(priority = 3, enabled = true)
     public void testValidUserName() throws InterruptedException {
         signin.EnterValidUserName();
         Thread.sleep(50);
     }
 
     // ebay_TC_026 signin with invalid credentials
-    @Test(priority = 5)
+    @Test(priority = 4, enabled = false)
     public void testInvalidUserName() {
         signin.EnterInvalidUserName();
     }
 
     // ebay_TC_024 navigaet to home page after sign in with invalid credentials
-    @Test(priority = 4)
+    @Test(priority = 5, enabled = false)
     public void testnavigateBack() {
         signin.goBackToHomeWindow();
     }
