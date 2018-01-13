@@ -1,48 +1,149 @@
 package testcases;
 
 import Homedepot_pages.Home;
+import Homedepot_pages.Lighting;
+import Homedepot_pages.SignIn;
 import base.CommonAPI;
 import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class HomepageTest extends CommonAPI {
-    @Test
-    public void verifyPageTitle() throws InterruptedException {
-        String title = driver.getTitle();
-        if (title.contains("The Home Depot")) {
-            System.out.println("1st verification passed");
-        } else {
-            System.out.println("1st verification failed");
-        }
-        sleepFor(10);
+public class HomepageTest extends Home {
+    Home objHomePage;
+    SignIn objSignin;
+    Lighting objlight;
+
+    @BeforeMethod
+    public void initialization(){
+        objHomePage = PageFactory.initElements(driver,Home.class);
+        objSignin=PageFactory.initElements(driver,SignIn.class);
+        objlight=PageFactory.initElements(driver,Lighting.class);
+    }
+
+
+    @Test (enabled = false)
+   public void veifyTitle() throws InterruptedException{
+        String actulaTitle = objHomePage.pageTitle();
+        String expectedTitle = "The Home Depot ";
+        Assert.assertTrue(actulaTitle.contains(expectedTitle));
 
     }
 
-    @Test
+    @Test (enabled = true)
+    public void verifySearchBoxTest(){
+
+         objHomePage.searchBox();
+         String actualtext=objlight.getlightingHeader();
+         String expectedtext="Lighting";
+         Assert.assertTrue(actualtext.contains(expectedtext));
+
+
+    }
+    @Test(enabled = false)
+   public void verifyHelpLinkStatusTest(){
+       boolean actualStatus= objHomePage.verifyHelpLinkStatus();
+
+        Assert.assertEquals(actualStatus,true);
+       System.out.println(" HelpLink is enabled");
+   }
+   @Test(enabled = false)
+   public void verifyFindStoreTest(){
+        boolean actualStatus=objHomePage.verifyStoreFinder();
+        Assert.assertEquals(actualStatus,true);
+       System.out.println("FindStore link is enabled");
+        }
+
+     @Test(enabled = false)
+     public void verifyForTheProTest(){
+         boolean actualStatus=objHomePage.verifyStoreFinder();
+         Assert.assertEquals(actualStatus,true);
+         System.out.println("For the pro  link is enabled");
+         }
+
+         @Test(enabled = false)
+       public void verifyGiftCardTest(){
+             boolean actualStatus=objHomePage.verifyGiftCards();
+             Assert.assertEquals(actualStatus,true);
+             System.out.println("GiftCards link is enabled");
+
+         }
+
+    @Test(enabled = false)
+    public void verifyCreditCardTest(){
+        boolean actualStatus=objHomePage.verifyCreditCard();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("Credit Services link is enabled");
+        }
+
+    @Test(enabled = false)
+    public void verifyMylistTest(){
+        boolean actualStatus=objHomePage.verifyMylist();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("MyList link is enabled");
+    }
+
+    @Test(enabled = false)
+    public void verifyTrackOrderTest(){
+        boolean actualStatus=objHomePage.verifyTrackOrder();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("TrackOrder link is enabled");
+    }
+
+    @Test(enabled = false)
+    public void verifyChooseStoreTest(){
+        boolean actualStatus=objHomePage.verifyChooseStore();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("ChooseAStore link is enabled");
+    }
+
+    @Test(enabled = false)
+    public void verifyAccountTest(){
+        boolean actualStatus=objHomePage.verifyAccount();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("Account link is enabled");
+    }
+
+
+    @Test(enabled = false)
+    public void verifyCartTest(){
+        boolean actualStatus=objHomePage.verifyCart();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("Cart link is enabled");
+    }
+
+    @Test(enabled = true)
+    public void verifyLogoTest(){
+        String actualStatus=objHomePage.isLogoVisible();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("HomeDepot logo  link is enabled");
+    }
+
+    @Test(enabled = false)
+    public void verifydepartmentTest(){
+        boolean actualStatus=objHomePage.verifyDepartments();
+        Assert.assertEquals(actualStatus,true);
+        System.out.println("Departments is displayed");
+    }
+
+    @Test (enabled = false)
     public void verifyURL() throws InterruptedException {
-        String url = getCurrentPageUrl();
-        if (url.contains("https://www.homedepot.com/")) {
-            System.out.println("second verification passed");
-        } else {
-            System.out.println("second verification failed");
+         String actualUrl= objHomePage.currentURL();
+         String expectedUrl="https://www.homedepot.com/";
+         Assert.assertEquals(actualUrl,expectedUrl);
+        System.out.println("Url varification passed");
         }
-        sleepFor(30);
 
 
-    }
-
-    @Test
+    @Test (enabled = false)
     public void checkAccountButton() {
         Home account = new Home();
         account.clickAccount();
-
+        }
     }
-
-
-}
 
 
 
