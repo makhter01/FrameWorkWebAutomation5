@@ -25,7 +25,7 @@ public class HomepageTest extends Home {
     }
 
 
-    @Test (enabled = false)
+    @Test (enabled = true)
    public void veifyTitle() throws InterruptedException{
         String actulaTitle = objHomePage.pageTitle();
         String expectedTitle = "The Home Depot ";
@@ -43,28 +43,28 @@ public class HomepageTest extends Home {
 
 
     }
-    @Test(enabled = false)
+    @Test(enabled = true)
    public void verifyHelpLinkStatusTest(){
        boolean actualStatus= objHomePage.verifyHelpLinkStatus();
 
         Assert.assertEquals(actualStatus,true);
        System.out.println(" HelpLink is enabled");
    }
-   @Test(enabled = false)
+   @Test(enabled = true)
    public void verifyFindStoreTest(){
         boolean actualStatus=objHomePage.verifyStoreFinder();
         Assert.assertEquals(actualStatus,true);
        System.out.println("FindStore link is enabled");
         }
 
-     @Test(enabled = false)
+     @Test(enabled = true)
      public void verifyForTheProTest(){
          boolean actualStatus=objHomePage.verifyStoreFinder();
          Assert.assertEquals(actualStatus,true);
          System.out.println("For the pro  link is enabled");
          }
 
-         @Test(enabled = false)
+         @Test(enabled = true)
        public void verifyGiftCardTest(){
              boolean actualStatus=objHomePage.verifyGiftCards();
              Assert.assertEquals(actualStatus,true);
@@ -72,35 +72,35 @@ public class HomepageTest extends Home {
 
          }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifyCreditCardTest(){
         boolean actualStatus=objHomePage.verifyCreditCard();
         Assert.assertEquals(actualStatus,true);
         System.out.println("Credit Services link is enabled");
         }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifyMylistTest(){
         boolean actualStatus=objHomePage.verifyMylist();
         Assert.assertEquals(actualStatus,true);
         System.out.println("MyList link is enabled");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifyTrackOrderTest(){
         boolean actualStatus=objHomePage.verifyTrackOrder();
         Assert.assertEquals(actualStatus,true);
         System.out.println("TrackOrder link is enabled");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifyChooseStoreTest(){
         boolean actualStatus=objHomePage.verifyChooseStore();
         Assert.assertEquals(actualStatus,true);
         System.out.println("ChooseAStore link is enabled");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifyAccountTest(){
         boolean actualStatus=objHomePage.verifyAccount();
         Assert.assertEquals(actualStatus,true);
@@ -108,7 +108,7 @@ public class HomepageTest extends Home {
     }
 
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifyCartTest(){
         boolean actualStatus=objHomePage.verifyCart();
         Assert.assertEquals(actualStatus,true);
@@ -122,14 +122,14 @@ public class HomepageTest extends Home {
         System.out.println("HomeDepot logo  link is enabled");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifydepartmentTest(){
         boolean actualStatus=objHomePage.verifyDepartments();
         Assert.assertEquals(actualStatus,true);
         System.out.println("Departments is displayed");
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void verifyURL() throws InterruptedException {
          String actualUrl= objHomePage.currentURL();
          String expectedUrl="https://www.homedepot.com/";
@@ -138,7 +138,7 @@ public class HomepageTest extends Home {
         }
 
 
-    @Test (enabled = false)
+    @Test (enabled =true)
     public void checkAccountButton() {
         Home account = new Home();
         account.clickAccount();
