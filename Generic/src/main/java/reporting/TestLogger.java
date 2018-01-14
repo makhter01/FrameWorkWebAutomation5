@@ -19,4 +19,4 @@ public class TestLogger {
         ExtentTestManager.getTest().log(LogStatus.INFO, message + "<br>");
     }
 
-}
+   }

@@ -34,6 +34,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static reporting.ExtentTestManger.startTest;
+
 public class CommonAPI {
     //ExtentReport
     public static ExtentReports extent;
@@ -137,8 +139,8 @@ public class CommonAPI {
     }
 
     public WebDriver getCloudDriver(String envName,String envUsername, String envAccessKey,String os, String os_version,String browserName,
-                                    String browserVersion)throws IOException {
-
+                                    String browserVersion)throws IOException
+    {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("browser",browserName);
         cap.setCapability("browser_version",browserVersion);
@@ -155,7 +157,6 @@ public class CommonAPI {
         }
         return driver;
     }
-
     @AfterMethod
     public void cleanUp(){
         driver.quit();
@@ -221,6 +222,11 @@ public class CommonAPI {
         String url = driver.getCurrentUrl();
         return url;
     }
+    // Added New Method here
+    public String getCurrentPageTitle(){
+        String title = driver.getTitle();
+        return title;
+    }
     public void navigateBack(){
         driver.navigate().back();
     }
@@ -242,13 +248,6 @@ public class CommonAPI {
         String st = driver.findElement(By.name(locator)).getText();
         return st;
     }
-
-    public String getCurrentPageTitle(){
-        String title = driver.getTitle();
-        return title;
-    }
-
-
 
     public List<String> getListOfString(List<WebElement> list) {
         List<String> items = new ArrayList<String>();
@@ -330,7 +329,6 @@ public class CommonAPI {
         } catch (Exception e) {
             System.out.println("Exception while taking screenshot "+e.getMessage());;
         }
-
     }
     //Taking Screen shots
     public void takeScreenShot()throws IOException {

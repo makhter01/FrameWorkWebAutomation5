@@ -3,19 +3,28 @@
 
 <suite name="ebay Automation Test" parallel="false">
 
-
     <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="Windows"/>
     <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="63.0"/>
     <parameter name="url" value="https://www.ebay.com/"/>
 
-
-    <test name = "ebay Home">
+    <test name = "ebay Home Automation">
         <classes>
-            <!--<class name="testcases.TestSearchBar"/>-->
+            <!--<class name="testcases.TestHomePage"/>-->
             <!--<class name="testcases.TestSearchItemPage"/>-->
             <class name="testcases.TestSignIn"/>
+            <class name="testcases.TestRegistration"/>
+            <!--<class name="testcases.TestInputExcelSheet"/>
+            <class name="testgooglesheet.Testgooglesheet"/>-->
+           <!-- <class name="testfeatures.TestFeatures"/>-->
         </classes>
     </test>
 
 </suite>
+
+
+
+
+

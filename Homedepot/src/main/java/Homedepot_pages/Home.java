@@ -2,6 +2,7 @@ package Homedepot_pages;
 
 import base.CommonAPI;
 
+<<<<<<< HEAD
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,6 +14,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+=======
+>>>>>>> Satinder_team5
 public class Home extends CommonAPI {
     @FindBy(xpath = "//*[@id=\"container\"]/div[1]/div[2]/div/div[2]/div[1]/div/div[1]/a")
     public static WebElement homedepLogo;

@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Properties;
 
 public class ConnectDB {
-
     public static MongoDatabase mongoDatabase = null;
     Connection connect = null;
     Statement statement = null;

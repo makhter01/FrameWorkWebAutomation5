@@ -32,11 +32,12 @@ public class MyAccount_Registration extends Home {
         return eml;
     }
 
-    public void newAccountRegistration() {
-        email.sendKeys("abcd@gmail.com");
-        password.sendKeys("abcd1234");
-        confermPassword.sendKeys("abcd1234");
-        zipcode.sendKeys("11432");
-        registartionclickButton.click();
+        public void newAccountRegistration(){
+            email.sendKeys("abcd@gmail.com");
+            password.sendKeys("abcd1234");
+            confermPassword.sendKeys("abcd1234");
+            zipcode.sendKeys("11432");
+            registartionclickButton.click();
         }
-}
+
+    }

@@ -15,7 +15,6 @@
             <!--<class name="testcustomerfunc.MyAccountTest"/>-->
             <!--<class name="testcustomerfunc.SignInTest"/>-->
             <!--<class name="testcases.SearchIteamByExcelTest"/>-->
-
         </classes>
     </test>
 </suite>
