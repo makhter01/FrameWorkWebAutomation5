@@ -18,7 +18,7 @@ public class TestRegistration extends Registration{
         registration = PageFactory.initElements(driver, Registration.class);
 
     }
-    //  ebay_TC_022 Click registration on main page
+    //  ebay_TC_01 Click registration on main page
     @Test(priority = 1,enabled=true)
     public void testclickRegLink(){
         registration.clickRegistrationLink();

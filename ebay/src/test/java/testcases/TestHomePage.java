@@ -130,12 +130,12 @@ public class TestHomePage extends Home_Page {
         System.out.println("Verify Deal Link : " + actualDeal);
     }
     //  ebay_TC_017 check radio button is selected
-    @Test(priority=17,enabled = true)
+    /*@Test(priority=17,enabled = true)
     public void testradioButtonisSelected() {
         boolean radiobutton = search.isRadioButtonSelected();
         Assert.assertEquals(radiobutton, true);
         System.out.println(" Verify Radio button is selected : " + radiobutton);
-    }
+    }*/
     //  ebay_TC_018 all category drop down count and select item with index3
     @Test(priority=18,enabled = true)
     public void testAllCateDropDown() {

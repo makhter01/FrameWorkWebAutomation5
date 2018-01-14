@@ -17,14 +17,14 @@ public class TestSearchItemPage extends SearchItemPage {
         itemsearch = PageFactory.initElements(driver, SearchItemPage.class);
     }
 
-    // ebay_TC_027 Verification point for SignIn Link
-    @Test(enabled = true)
+    // ebay_TC_01 Verification point for SignIn Link
+    @Test(priority = 1,enabled = true)
     public void testProductSearchbyCapLetter() {
         itemsearch.searchbyCapLetter();
     }
 
-    // ebay_TC_028
-    @Test(enabled = true)
+    // ebay_TC_02 Verify search item
+    @Test(priority = 2,enabled = true)
     public void testProductSearch() {
         itemsearch.searchItem();
     }

@@ -122,12 +122,12 @@ public class Home_Page extends CommonAPI {
         boolean dealls = deals.isEnabled();
         return dealls ;
     }
-    public static boolean isRadioButtonSelected(){
-        radioButton.click();
+  /* public static boolean isRadioButtonSelected(){
+       radioButton.click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         boolean selected = radioButton.isSelected();
         return selected;
-    }
+   }*/
     // Footer Link
     public static boolean isBuyLinkDisplayed(){
         boolean buylink = buyLink.isDisplayed();
