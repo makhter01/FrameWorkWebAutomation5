@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>ebay</module>
         <module>Homedepot</module>
+        <module>ChaseBank</module>
     </modules>
 
     <dependencyManagement>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Amazon Automation Test" parallel="false">
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="browserstack"/>
+    <parameter name="os" value="OS X"/>
+    <parameter name="os_version" value="Sierra"/>
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="browserVersion" value="57.0"/>
+    <parameter name="url" value="https://www.chase.com/"/>
+
+    <test name = "ChaseHome">
+        <classes>
+            <class name="testNav.TestNavigatePage"/>
+            <class name="testPackage.HomeSearchTest"/>
+            <class name="testPackage.TestDropDownMenu"/>
+            <class name="enrollTestPage.TestSignInPage"/>
+            <class name="navigation.CarouselPage"/>
+
+        </classes>
+    </test>
+
+</suite>
