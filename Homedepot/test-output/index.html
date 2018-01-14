@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Homedepot_Automation_Test">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Homedepot_Automation_Test" title="testcases.SearchIteamByExcelTest" class="method navigator-link" hash-for-method="verifyDataReaderExcel">verifyDataReaderExcel</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Homedepot_Automation_Test" title="testcases.GoogleExcellSheetTest" class="method navigator-link" hash-for-method="verifygoggleExcelraeder">verifygoggleExcelraeder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Homedepot_Automation_Test -->
@@ -120,19 +120,17 @@
           <div class="suite-Homedepot_Automation_Test-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testcases.SearchIteamByExcelTest</span>
+              <span class="class-name">testcases.GoogleExcellSheetTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyDataReaderExcel">
-                  </a> <!-- verifyDataReaderExcel -->
-                  <span class="method-name">verifyDataReaderExcel</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at base.CommonAPI.typeByCssNEnter(CommonAPI.java:176)
-	at Homedepot_pages.SearchIteamByExcel.homedepotExcelSearchItem(SearchIteamByExcel.java:28)
-	at testcases.SearchIteamByExcelTest.verifyDataReaderExcel(SearchIteamByExcelTest.java:26)
-... Removed 24 stack frames
+                  <a name="verifygoggleExcelraeder">
+                  </a> <!-- verifygoggleExcelraeder -->
+                  <span class="method-name">verifygoggleExcelraeder</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at testcases.GoogleExcellSheetTest.verifygoggleExcelraeder(GoogleExcellSheetTest.java:21)
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -157,7 +155,7 @@
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.homedepot.com/&quot;/&gt;
   &lt;test name=&quot;HomeDepot HomepageTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.SearchIteamByExcelTest&quot;/&gt;
+      &lt;class name=&quot;testcases.GoogleExcellSheetTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- HomeDepot HomepageTest --&gt;
 &lt;/suite&gt; &lt;!-- Homedepot Automation Test --&gt;
@@ -199,14 +197,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyDataReaderExcel')
-data.setCell(0, 2, 'testcases.SearchIteamByExcelTest')
-data.setCell(0, 3, 1711);
+data.setCell(0, 1, 'verifygoggleExcelraeder')
+data.setCell(0, 2, 'testcases.GoogleExcellSheetTest')
+data.setCell(0, 3, 33297);
 window.suiteTableData['Homedepot_Automation_Test']= { tableData: data, tableDiv: 'times-div-Homedepot_Automation_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Homedepot_Automation_Test">
               </div> <!-- times-div-Homedepot_Automation_Test -->
             </div> <!-- times-div -->
@@ -217,12 +215,6 @@ return data;
             <span class="header-content">Reporter output for Homedepot Automation Test</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyDataReaderExcel</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">SearchIteamByExcelTest: verify Data Reader Excel</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Homedepot_Automation_Test" class="panel">
@@ -238,40 +230,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.SearchIteamByExcelTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.GoogleExcellSheetTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@2459319c)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@4d192aef)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(false, browserstack, OS X, High Sierra, chrome, 63.0, https://www.homedepot.com/)</span>
-                <span class="method-start">1449 ms</span>
+                <span class="method-start">1039 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">startExtent(public void testcases.SearchIteamByExcelTest.verifyDataReaderExcel() throws java.io.IOException,java...)</span>
-                <span class="method-start">15398 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initialization</span>
-                <span class="method-start">15408 ms</span>
+                <span class="method-name">startExtent(public void testcases.GoogleExcellSheetTest.verifygoggleExcelraeder() throws java.io.IOException,jav...)</span>
+                <span class="method-start">11568 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyDataReaderExcel</span>
-                <span class="method-start">15413 ms</span>
+                <span class="method-name">verifygoggleExcelraeder</span>
+                <span class="method-start">11575 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=verifyDataReaderExcel status=FAILURE method=SearchIteamByExcelTest.verifyDataReader...)</span>
-                <span class="method-start">17135 ms</span>
+                <span class="method-name">afterEachTestMethod([TestResult name=verifygoggleExcelraeder status=FAILURE method=GoogleExcellSheetTest.verifygoggleExc...)</span>
+                <span class="method-start">44881 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">19035 ms</span>
+                <span class="method-start">46904 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">19092 ms</span>
+                <span class="method-start">46946 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

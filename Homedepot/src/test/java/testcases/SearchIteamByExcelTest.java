@@ -9,12 +9,12 @@ import reporting.TestLogger;
 
 import java.io.IOException;
 
-public class SearchIteamByExcelTest extends SearchIteamByExcel{
+public class SearchIteamByExcelTest extends SearchIteamByExcel {
     SearchIteamByExcel inputData;
 
     @BeforeMethod
     public void initialization() {
-        inputData= PageFactory.initElements(driver,SearchIteamByExcel.class);
+        inputData = PageFactory.initElements(driver, SearchIteamByExcel.class);
     }
 
     // Search multiple items by Name from a xls file

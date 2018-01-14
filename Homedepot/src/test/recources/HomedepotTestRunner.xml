@@ -11,11 +11,12 @@
     <test name = "HomeDepot HomepageTest">
         <classes>
 
-            <!--<class name="testcases.HomepageTest"/>
-            <class name="testcustomerfunc.MyAccountTest"/>
-            <class name="testcustomerfunc.SignInTest"/>-->
+           <!-- <class name="testcases.HomepageTest"/>-->
+            <!--<class name="testcustomerfunc.MyAccountTest"/>-->
+           <!-- <class name="testcustomerfunc.SignInTest"/>
             <class name="testcases.SearchIteamByExcelTest"/>
-
+-->
+             <class name="testcases.GoogleExcellSheetTest"/>
         </classes>
     </test>
 </suite>

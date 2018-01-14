@@ -5,7 +5,7 @@ import utility.DataReader;
 
 import java.io.IOException;
 
-public class SearchIteamByExcel extends CommonAPI{
+public class SearchIteamByExcel extends CommonAPI {
     DataReader dtr = new DataReader();
 
     public String[] getExcelData(String fileName) throws IOException {
