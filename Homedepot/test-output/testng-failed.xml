@@ -10,18 +10,17 @@
   <parameter name="url" value="https://www.homedepot.com/"/>
   <test name="HomeDepot HomepageTest(failed)">
     <classes>
-      <class name="testcases.SearchIteamByExcelTest">
+      <class name="testcases.GoogleExcellSheetTest">
         <methods>
-          <include name="initialization"/>
           <include name="afterEachTestMethod"/>
-          <include name="verifyDataReaderExcel"/>
+          <include name="verifygoggleExcelraeder"/>
           <include name="generateReport"/>
           <include name="extentSetup"/>
           <include name="setUp"/>
           <include name="startExtent"/>
           <include name="cleanUp"/>
         </methods>
-      </class> <!-- testcases.SearchIteamByExcelTest -->
+      </class> <!-- testcases.GoogleExcellSheetTest -->
     </classes>
   </test> <!-- HomeDepot HomepageTest(failed) -->
 </suite> <!-- Failed suite [Homedepot Automation Test] -->

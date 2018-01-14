@@ -1,11 +1,9 @@
-package Homedepot_pages;
+package authentication;
 
 import base.CommonAPI;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import javax.swing.text.html.CSS;
 
 public class SignIn extends CommonAPI{
 
