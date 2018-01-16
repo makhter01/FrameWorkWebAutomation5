@@ -5,18 +5,20 @@
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="Windows"/>
-    <parameter name="os_version" value="High Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="63.0"/>
     <parameter name="url" value="https://www.homedepot.com/"/>
+
     <test name = "HomeDepot HomepageTest">
+
         <classes>
-            <class name="testcases.HomepageTest"/>
-            <!--<class name="testcustomerfunc.MyAccountTest"/>-->
-            <!--<class name="testcustomerfunc.SignInTest"/>-->
+            <!--<class name="testcases.HomepageTest"/>-->
+           <!-- <class name="testcustomerfunc.MyAccountTest"/>-->
+            <class name="testcustomerfunc.SignInTest"/>
             <!--<class name="testcases.SearchIteamByExcelTest"/>-->
         </classes>
     </test>
+
 </suite>
 
 

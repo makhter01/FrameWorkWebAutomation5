@@ -17,7 +17,7 @@ public class MyAccountTest extends MyAccount_Registration {
         objMyacc= PageFactory.initElements(driver,MyAccount_Registration.class);
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void verifyRegistrationTest() throws InterruptedException{
         //objHome.clickAccount();
         objHome.
