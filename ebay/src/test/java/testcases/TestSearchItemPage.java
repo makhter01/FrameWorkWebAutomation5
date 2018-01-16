@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 import page.Home_Page;
 import page.SearchItemPage;
 
-import static base.CommonAPI.driver;
-
 public class TestSearchItemPage extends SearchItemPage {
     SearchItemPage itemsearch;
 

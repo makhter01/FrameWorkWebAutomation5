@@ -19,7 +19,7 @@ public class TestInputExcelSheet extends InputExcelSheet {
     // Search multiple items by Name from a xls file
     @Test(enabled = true)
     public void verifyDataReaderExcel() throws IOException, InterruptedException {
-        TestLogger.log(getClass().getSimpleName() + ": " + converToString(new Object() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
         String[] expectedItems = inputsheet.getExcelDataAssert("ebaySearchItem.xls");
         String[] actualItems = inputsheet.ebaySearchItem1("ebaySearchItem.xls");

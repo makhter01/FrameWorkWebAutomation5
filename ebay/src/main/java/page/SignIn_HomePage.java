@@ -18,7 +18,7 @@ public class SignIn_HomePage extends CommonAPI {
     @FindBy(id = "errf")
     public static WebElement errorMessage;
 
-    public static void ClickSignIn() {
+    public void ClickSignIn() {
         SignInLink.click();
         String url = driver.getCurrentUrl();
         if (url.contains("signin.ebay.com")) {
@@ -28,7 +28,7 @@ public class SignIn_HomePage extends CommonAPI {
         }
     }
 
-    public static boolean emailSignInBoxEnabled() {
+    public boolean emailSignInBoxEnabled() {
         SignInLink.click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         boolean signInBox = userId.isEnabled();

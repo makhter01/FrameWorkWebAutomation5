@@ -144,13 +144,13 @@ public class Home_Page extends CommonAPI {
         String title = driver.getTitle();
         return title;
    }
-    public static void ClickFashionbutton(){
+    public void ClickFashionbutton(){
         Actions fashion = new Actions(driver);
         fashion.moveToElement(FashionButton).build().perform();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         System.out.println("The title of Luxury hand Bags is :" + driver.getTitle());
     }
-    public static void ClickCrossTrainImage(){
+    public void ClickCrossTrainImage(){
         crossTrainImage.click();
         System.out.println("The title of crossTrain image is :" + driver.getTitle());
         driver.navigate().back();

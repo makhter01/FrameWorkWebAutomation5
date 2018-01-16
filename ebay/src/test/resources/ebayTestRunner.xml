@@ -14,7 +14,7 @@
         <classes>
             <!--<class name="testcases.TestHomePage"/>-->
             <!--<class name="testcases.TestSearchItemPage"/>-->
-            <class name="testcases.TestSignIn"/>
+            <!--<class name="testcases.TestSignIn"/>-->
             <class name="testcases.TestRegistration"/>
             <!--<class name="testcases.TestInputExcelSheet"/>
             <class name="testgooglesheet.Testgooglesheet"/>-->
