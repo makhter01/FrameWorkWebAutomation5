@@ -20,7 +20,7 @@ public class TestRegistration extends Registration{
     }
     //  ebay_TC_01 Click registration on main page
     @Test(priority = 1,enabled=true)
-    public void testclickRegLink(){
+    public void testclickRegLink() throws InterruptedException {
         registration.clickRegistrationLink();
 
     }

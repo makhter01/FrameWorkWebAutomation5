@@ -1,4 +1,5 @@
 package page;
+
 import base.CommonAPI;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -13,149 +14,157 @@ import java.util.concurrent.TimeUnit;
 
 public class Home_Page extends CommonAPI {
 
-    @FindBy( id = "gh-btn")
+    @FindBy(id = "gh-btn")
     public static WebElement SearchButton;
-    @FindBy( id = "gh-logo")
+    @FindBy(id = "gh-logo")
     public static WebElement logoimage;
-    @FindBy( linkText = "Electronics")
+    @FindBy(linkText = "Electronics")
     public static WebElement electronicsTab;
-    @FindBy( linkText = "Fashion")
+    @FindBy(linkText = "Fashion")
     public static WebElement FashionButton;
-    @FindBy( xpath = "//*[@id='s0-container']/li[3]/a")
+    @FindBy(xpath = "//*[@id='s0-container']/li[3]/a")
     public static WebElement MotorsButton;
-    @FindBy( xpath = "//*[@id='s0-container']/li[2]/a")
+    @FindBy(xpath = "//*[@id='s0-container']/li[2]/a")
     public static WebElement saved;
-    @FindBy( xpath = "//*[@id=\"s0-container\"]/li[6]/a")
+    @FindBy(xpath = "//*[@id=\"s0-container\"]/li[6]/a")
     public static WebElement CollectiblesArt;
-    @FindBy( xpath = "//*[@id=\"s0-container\"]/li[7]/a")
+    @FindBy(xpath = "//*[@id=\"s0-container\"]/li[7]/a")
     public static WebElement HomeGarden;
-    @FindBy( xpath = "//*[@id=\"s0-container\"]/li[8]/a")
+    @FindBy(xpath = "//*[@id=\"s0-container\"]/li[8]/a")
     public static WebElement sports;
-    @FindBy( xpath = "//*[@id=\"s0-container\"]/li[9]/a")
+    @FindBy(xpath = "//*[@id=\"s0-container\"]/li[9]/a")
     public static WebElement toys;
-    @FindBy( xpath = "//*[@id=\"s0-container\"]/li[10]/a")
+    @FindBy(xpath = "//*[@id=\"s0-container\"]/li[10]/a")
     public static WebElement business;
-    @FindBy( xpath = "//*[@id=\"s0-container\"]/li[11]/a")
+    @FindBy(xpath = "//*[@id=\"s0-container\"]/li[11]/a")
     public static WebElement music;
-    @FindBy( xpath = "//*[@id=\"s0-container\"]/li[12]/a")
+    @FindBy(xpath = "//*[@id=\"s0-container\"]/li[12]/a")
     public static WebElement deals;
-    @FindBy( xpath = "//*[@id=\"s5\"]/div[2]/ul/li[1]/button")
+    @FindBy(xpath = "//*[@id=\"s5\"]/div[2]/ul/li[1]/button")
     public static WebElement radioButton;
     @FindBy(xpath = "//*[@id=\'gh-cat\']")
     public static WebElement AllCategoryDropDown;
-    @FindBy( xpath = "//*[@id=\'tabJs_1\']")
-    public static WebElement Motorcycles;
-    @FindBy( xpath = "//*[@id=\'s6-body\']//li[2]/a/div[1]/div/div")
+    @FindBy(xpath = "//*[@id=\'s6-body\']//li[2]/a/div[1]/div/div")
     public static WebElement crossTrainImage;
-    @FindBy( id = "gh-ac")
+    @FindBy(id = "gh-ac")
     public static WebElement searchBar;
-   @FindBy( xpath = "//*[@id=\"gf-BIG\"]//td[1]/ul/li[1]/h3/a")
+    @FindBy(xpath = "//*[@id=\"gf-BIG\"]//td[1]/ul/li[1]/h3/a")
     public static WebElement buyLink;
-    @FindBy( linkText = "register")
+    @FindBy(linkText = "register")
     public static WebElement regLink;
 
-    public String isCurrentUrlCorrect(){
-          String actualUrl = getCurrentPageUrl();
+    public String isCurrentUrlCorrect() {
+        String actualUrl = getCurrentPageUrl();
         return actualUrl;
     }
+
     public String pageTitle() throws InterruptedException {
-          String title = driver.getTitle();
-          return title;
+        String title = driver.getTitle();
+        return title;
     }
-   public String getpagetTitle(){
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        String title = driver.getCurrentUrl();
-        return title;}
-   public static boolean isebayLogoDislayed() {
-       boolean logo =logoimage.isDisplayed();
-       return logo;
-   }
+
+    public static boolean isebayLogoDislayed() {
+        boolean logo = logoimage.isDisplayed();
+        return logo;
+    }
+
     public static boolean isSearchButtonDislayed() {
         boolean searchbutton = SearchButton.isDisplayed();
         return searchbutton;
     }
+
     public static boolean isRegLinkDispayed() {
         boolean regLink1 = regLink.isDisplayed();
         return regLink1;
-   }
+    }
+
     public static boolean isElectronicsLinkDisplayed() {
         boolean electronics = electronicsTab.isDisplayed();
         return electronics;
     }
+
     public static boolean isFashionLinkDisplayed() {
         boolean fashion = FashionButton.isDisplayed();
         return fashion;
     }
+
     public static boolean isMotorLinkDisplayed() {
         boolean motors = MotorsButton.isDisplayed();
         return motors;
     }
+
     public static boolean isCollectiblesArtLinkEnabled() {
         boolean collcibles = CollectiblesArt.isEnabled();
         return collcibles;
     }
+
     public static boolean isHomeGardenEnabled() {
         boolean homegarden = HomeGarden.isEnabled();
         return homegarden;
     }
+
     public static boolean isSportingGoodEnabled() {
         boolean sporting = sports.isEnabled();
         return sporting;
     }
+
     public static boolean isToysEnabled() {
         boolean toy = toys.isEnabled();
-        return toy ;
+        return toy;
     }
+
     public static boolean isSavedEnabled() {
         boolean save = saved.isEnabled();
-        return save ;
+        return save;
     }
+
     public static boolean isBusineesIndustryEnabled() {
         boolean busInd = business.isEnabled();
-        return busInd  ;
+        return busInd;
     }
+
     public static boolean isMusicEnabled() {
         boolean mussic = music.isEnabled();
-        return mussic ;
+        return mussic;
     }
+
     public static boolean isDealsEnabled() {
         boolean dealls = deals.isEnabled();
-        return dealls ;
+        return dealls;
     }
-  /* public static boolean isRadioButtonSelected(){
-       radioButton.click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        boolean selected = radioButton.isSelected();
-        return selected;
-   }*/
+
+    /* public static boolean isRadioButtonSelected(){
+         radioButton.click();
+          driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+          boolean selected = radioButton.isSelected();
+          return selected;
+     }*/
     // Footer Link
-    public static boolean isBuyLinkDisplayed(){
+    public static boolean isBuyLinkDisplayed() {
         boolean buylink = buyLink.isDisplayed();
         return buylink;
     }
-    public void AllCateDropDown(){
+
+    public void AllCateDropDown() {
         Select dropDown = new Select(AllCategoryDropDown);
         dropDown.selectByIndex(3);
         List<WebElement> elements = dropDown.getOptions();
         System.out.println(elements.size());
     }
-    public String ClickMotorLink(){
+
+    public String ClickMotorLink() {
         MotorsButton.click();
         String title = driver.getTitle();
         return title;
-   }
-    public static void ClickFashionbutton(){
-        Actions fashion = new Actions(driver);
-        fashion.moveToElement(FashionButton).build().perform();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        System.out.println("The title of Luxury hand Bags is :" + driver.getTitle());
     }
-    public static void ClickCrossTrainImage(){
+
+    public static void ClickCrossTrainImage() {
         crossTrainImage.click();
         System.out.println("The title of crossTrain image is :" + driver.getTitle());
         driver.navigate().back();
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
     }
+
     public void searchItem() {
         searchBar.sendKeys("tablet samsung", Keys.ENTER);
     }

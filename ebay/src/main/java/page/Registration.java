@@ -26,7 +26,9 @@ public class Registration extends CommonAPI {
     @FindBy( id="gh-ug")
     public static WebElement hiuserName;
 
-    public void clickRegistrationLink(){
+    public void clickRegistrationLink() throws InterruptedException {
+        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        sleepFor(1);
         regLink.click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         enterFrsName.sendKeys("Salnam");
@@ -34,7 +36,7 @@ public class Registration extends CommonAPI {
         enterEmail.sendKeys("salman27271965@gmail.com");
         enterPassword.sendKeys("2727salman");
         showPassword.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         FormSbtBtn.click();
     }
 }
