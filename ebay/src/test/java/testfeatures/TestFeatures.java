@@ -8,7 +8,7 @@ import page.InputExcelSheet;
 import java.io.IOException;
 
 public class TestFeatures extends Features {
-    @Test
+    @Test(enabled=true)
     public void selectFeatures1() throws IOException, InterruptedException {
         Features featureObj = PageFactory.initElements(driver,  Features.class);
         featureObj.selectFeatures();

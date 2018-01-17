@@ -27,7 +27,6 @@ public class Registration extends CommonAPI {
     public static WebElement hiuserName;
 
     public void clickRegistrationLink() throws InterruptedException {
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         sleepFor(1);
         regLink.click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

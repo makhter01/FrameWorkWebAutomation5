@@ -4,7 +4,7 @@ import Homedepot_pages.Home;
 import org.testng.annotations.Test;
 
 public class HomepageTest extends Home{
-    @Test
+    @Test(priority=1)
     public void verifyPageTitle() throws InterruptedException {
         String title = driver.getTitle();
         if (title.contains("The Home Depot")) {
@@ -15,7 +15,7 @@ public class HomepageTest extends Home{
         sleepFor(1);
     }
 
-    @Test
+    @Test(priority=2)
     public void verifyURL() throws InterruptedException {
         String url = getCurrentPageUrl();
         if (url.contains("https://www.homedepot.com/")) {
@@ -26,7 +26,7 @@ public class HomepageTest extends Home{
         sleepFor(1);
     }
 
-    @Test
+    @Test(priority=3)
     public void checkAccountButton() {
        clickAccount();
 

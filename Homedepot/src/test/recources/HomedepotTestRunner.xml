@@ -11,8 +11,8 @@
 
     <test name="Automation" >
         <classes>
-            <!--<class name="testcases.HomepageTest" />
-            <class name="testseachItem.SearchBarTest" />-->
+            <class name="testcases.HomepageTest" />
+           <!-- <class name="testseachItem.SearchBarTest" />-->
         </classes>
     </test>
 

@@ -34,7 +34,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_003 verify existance of logo on main page
-    @Test(priority = 3, enabled = false)
+    @Test(priority = 3, enabled = true)
     public void testlogoisDisplayed() {
         boolean logoImage = search.isebayLogoDislayed();
         Assert.assertEquals(logoImage, true);
@@ -42,7 +42,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_004 verify existance of search button on main page
-    @Test(priority = 4, enabled = false)
+    @Test(priority = 4, enabled = true)
     public void testSearchLinkisDisplayed() {
         boolean actualSearch = search.isSearchButtonDislayed();
         Assert.assertEquals(actualSearch, true);
@@ -50,7 +50,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_005 verify existance of registration button on main page
-    @Test(priority = 5, enabled = false)
+    @Test(priority = 5, enabled = true)
     public void testRegLinkisDisplayed() {
         boolean actualRegLink = search.isRegLinkDispayed();
         Assert.assertEquals(actualRegLink, true);
@@ -58,7 +58,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_006 verify existance of electronics link on main page
-    @Test(priority = 6, enabled = false)
+    @Test(priority = 6, enabled = true)
     public void testElectronincsLinkisDisplayed() {
         boolean actualElectronics = search.isElectronicsLinkDisplayed();
         Assert.assertEquals(actualElectronics, true);
@@ -66,7 +66,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_007 verify existance of Fashion Link on main page
-    @Test(priority = 7, enabled = false)
+    @Test(priority = 7, enabled = true)
     public void testFashionLinkisDislayed() {
         boolean actualFashion = search.isFashionLinkDisplayed();
         Assert.assertEquals(actualFashion, true);
@@ -74,7 +74,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_008 verify existance of Motor Link on main page
-    @Test(priority = 8, enabled = false)
+    @Test(priority = 8, enabled = true)
     public void testMotorsLinkisDislayed() {
         boolean actualMotors = search.isMotorLinkDisplayed();
         Assert.assertEquals(actualMotors, true);
@@ -82,7 +82,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_009 verify existance of Collectibles & ArtLink on main page
-    @Test(priority = 9, enabled = false)
+    @Test(priority = 9, enabled = true)
     public void testCollectblesArtisEnabled() {
         boolean actualCollArt = search.isCollectiblesArtLinkEnabled();
         Assert.assertEquals(actualCollArt, true);
@@ -90,7 +90,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_010 verify existance of Home & Garden on main page
-    @Test(priority = 10, enabled = false)
+    @Test(priority = 10, enabled = true)
     public void testHomeGardenisEnabled() {
         boolean actualHomeGard = search.isHomeGardenEnabled();
         Assert.assertEquals(actualHomeGard, true);
@@ -98,7 +98,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_011 verify existance of Sporting Goods on main page
-    @Test(priority = 11, enabled = false)
+    @Test(priority = 11, enabled = true)
     public void testSportingGoodsisEnabled() {
         boolean actualSporting = search.isSportingGoodEnabled();
         Assert.assertEquals(actualSporting, true);
@@ -106,7 +106,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_012 verify existance of Toys on main page
-    @Test(priority = 12, enabled = false)
+    @Test(priority = 12, enabled = true)
     public void testToysisEnabled() {
         boolean actualToys = search.isToysEnabled();
         Assert.assertEquals(actualToys, true);
@@ -114,7 +114,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_013 verify existance of saved on main page
-    @Test(priority = 13, enabled = false)
+    @Test(priority = 13, enabled = true)
     public void testSavedisEnabled() {
         boolean actualsaved = search.isSavedEnabled();
         Assert.assertEquals(actualsaved, true);
@@ -122,7 +122,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_014 verify existance of business & industry on main page
-    @Test(priority = 14, enabled = false)
+    @Test(priority = 14, enabled = true)
     public void testisBusineesIndustryEnabled() {
         boolean actualbussiness = search.isBusineesIndustryEnabled();
         Assert.assertEquals(actualbussiness, true);
@@ -130,7 +130,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_015 verify existance of music on main page
-    @Test(priority = 15, enabled = false)
+    @Test(priority = 15, enabled = true)
     public void testisMusicEnabled() {
         boolean actualMusic = search.isMusicEnabled();
         Assert.assertEquals(actualMusic, true);
@@ -138,34 +138,27 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_016 verify existance of deals on main page
-    @Test(priority = 16, enabled = false)
+    @Test(priority = 16, enabled = true)
     public void testisDealsEnabled() {
         boolean actualDeal = search.isDealsEnabled();
         Assert.assertEquals(actualDeal, true);
         System.out.println("Verify Deal Link : " + actualDeal);
     }
 
-    //  ebay_TC_017 check radio button is selected
-    /*@Test(priority=17,enabled = true)
-    public void testradioButtonisSelected() {
-        boolean radiobutton = search.isRadioButtonSelected();
-        Assert.assertEquals(radiobutton, true);
-        System.out.println(" Verify Radio button is selected : " + radiobutton);
-    }*/
     //  ebay_TC_018 all category drop down count and select item with index3
-    @Test(priority = 18, enabled = false)
+    @Test(priority = 17, enabled = true)
     public void testAllCateDropDown() {
         search.AllCateDropDown();
     }
 
     //  ebay_TC_019 all category drop down count and select item with index3
-    @Test(priority = 19, enabled = true)
+    @Test(priority = 18, enabled = true)
     public void testCrossTrainImageisDisplayed() {
         search.ClickCrossTrainImage();
     }
 
     // ebay_TC_020 Footer Elements verification
-    @Test(priority = 20, enabled = false)
+    @Test(priority = 19, enabled = true)
     public void testbuyLinkisDispalyed() {
         boolean buy = search.isBuyLinkDisplayed();
         Assert.assertEquals(buy, true);
@@ -173,7 +166,7 @@ public class TestHomePage extends Home_Page {
     }
 
     //  ebay_TC_021 all category drop down count and select item with index3
-    @Test(priority = 21, enabled = false)
+    @Test(priority = 20, enabled = true)
     public void testsearchitemBoxisEntered() {
         search.searchItem();
         tablet.getSamsungTabletHeader();
@@ -184,7 +177,7 @@ public class TestHomePage extends Home_Page {
     }
 
     // ebay_TC_022  Verify clicking of Motor Link on main Page
-    @Test(priority = 22, enabled = false)
+    @Test(priority = 21, enabled = true)
     public void testClickMotorsLink() throws InterruptedException {
         String actualTitle = search.ClickMotorLink();
         String expectedTitle = "Tires & Wheels";
