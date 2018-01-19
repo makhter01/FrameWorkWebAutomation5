@@ -33,7 +33,7 @@ public class Features extends CommonAPI {
         System.out.println("Test for Registration is passed");
     }
 
-    public void searchItem() throws IOException{
+    public void searchitem() throws IOException{
         driver.navigate().to("https://www.ebay.com/");
         searchItemObj = PageFactory.initElements(driver,  SearchItemPage.class);
         searchItemObj.searchItem();
@@ -53,8 +53,8 @@ public class Features extends CommonAPI {
             case "registration":
                 registration();
                 break;
-            case "searchItem":
-                searchItem();
+            case "searchitem":
+                searchitem();
                 break;
             case "inputExcelDataItems":
                 inputExcelDataItems("ebaySearchItem.xls");

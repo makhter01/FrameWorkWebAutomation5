@@ -9,10 +9,14 @@
     <parameter name="browserVersion" value="63.0"/>
     <parameter name="url" value="https://www.homedepot.com/"/>
 
-    <test name="Automation" >
+    <test name="Automation 1" preserve-order="true" >
         <classes>
-            <class name="testcases.HomepageTest" />
-           <!-- <class name="testseachItem.SearchBarTest" />-->
+            <class name="testcases.HomepageTest"/>
+        </classes>
+    </test>
+        <test name="Automation 2" preserve-order="true" >
+        <classes>
+           <class name="testseachItem.SearchBarTest"/>
         </classes>
     </test>
 

@@ -19,7 +19,8 @@ public class GoogleSheet extends CommonAPI {
 
         // Build a new authorized API client service.
         Sheets service = getSheetsService();
-        com.google.api.services.sheets.v4.model.ValueRange response = service.spreadsheets().values()
+        com.google.api.services.sheets.v4.model.ValueRange
+                response = service.spreadsheets().values()
                 .get(spreadsheetId, range)
                 .execute();
         List<List<Object>> values = response.getValues();

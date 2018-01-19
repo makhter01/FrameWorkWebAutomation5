@@ -21,10 +21,8 @@ public class Registration extends CommonAPI {
     public static WebElement enterPassword;
     @FindBy( xpath="//*[@id=\"showPASSWORD\"]//span[1]")
     public static WebElement showPassword;
-    @FindBy( id="ppaFormSbtBtn")
+    @FindBy( xpath="//*[@id=\"ppaFormSbtBtn\"]")
     public static WebElement FormSbtBtn;
-    @FindBy( id="gh-ug")
-    public static WebElement hiuserName;
 
     public void clickRegistrationLink() throws InterruptedException {
         sleepFor(1);
