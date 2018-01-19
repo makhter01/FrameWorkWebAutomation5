@@ -10,45 +10,43 @@
     <parameter name="browserVersion" value="63.0"/>
     <parameter name="url" value="https://www.ebay.com/"/>
 
-    <!--&lt;!&ndash;<test name = "ebay Home Automation 1" preserve-order="true">
-        <classes>
+  <!-- &lt;!&ndash; <test name="ebay Home Automation 1" preserve-order="true" >
+    <classes>
             <class name="testcases.TestHomePage"/>
-        </classes>
+     </classes>
     </test>
-    <test name = "ebay Home Automation 2" preserve-order="true">
-        <classes>
+    <test name="ebay Home Automation 2" preserve-order="true" >
+    <classes>
             <class name="testcases.TestSearchItemPage"/>
-        </classes>
+    </classes>
     </test>
-    <test name = "ebay Home Automation 3" preserve-order="true">
+    <test name="ebay Home Automation 3" preserve-order="true" >
         <classes>
             <class name="testcases.TestSignIn"/>
-        </classes>
+    </classes>
     </test>
-    <test name = "ebay Home Automation 4" preserve-order="true">
+    <test name="ebay Home Automation 4" preserve-order="true" >
         <classes>
             <class name="testcases.TestRegistration"/>
         </classes>
     </test>
-    <test name = "ebay Home Automation 5" preserve-order="true">
+    <test name="ebay Home Automation 5" preserve-order="true" >
+        <classes>
+            <class name="testgooglesheet.Testgooglesheet"/>
+        </classes>
+    </test>
+    <test name="ebay Home Automation 6" preserve-order="true" >
+        <classes>
+            <class name="testfeatures.TestFeatures"/>
+        </classes>&ndash;&gt;
+    </test>-->
+    <test name="ebay Home Automation 7" preserve-order="true" >
         <classes>
             <class name="testcases.TestInputExcelSheet"/>
         </classes>
     </test>
-    <test name = "ebay Home Automation 6" preserve-order="true">
-        <classes>
-            <class name="testgooglesheet.Testgooglesheet"/>
-        </classes>&ndash;&gt;
-    </test>-->
-    <test name = "ebay Home Automation 7" preserve-order="true">
-        <classes>
-            <class name="testfeatures.TestFeatures"/>
-        </classes>
-    </test>
 
 </suite>
-
-
 
 
 
