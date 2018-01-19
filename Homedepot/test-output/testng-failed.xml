@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Homedepot Automation Test]" guice-stage="DEVELOPMENT">
-  <parameter name="useCloudEnv" value="false"/>
+  <parameter name="useCloudEnv" value="true"/>
   <parameter name="os" value="OS X"/>
   <parameter name="os_version" value="High Sierra"/>
   <parameter name="browserVersion" value="63.0"/>

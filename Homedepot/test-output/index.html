@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Homedepot_Automation_Test" class="navigator-link">
-              <span class="suite-name border-failed">Homedepot Automation Test</span>
+              <span class="suite-name border-passed">Homedepot Automation Test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Homedepot_Automation_Test" class="hide-methods failed suite-Homedepot_Automation_Test"> (hide)</a> <!-- hide-methods failed suite-Homedepot_Automation_Test -->
-                      <a href="#" panel-name="suite-Homedepot_Automation_Test" class="show-methods failed suite-Homedepot_Automation_Test"> (show)</a> <!-- show-methods failed suite-Homedepot_Automation_Test -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Homedepot_Automation_Test" class="hide-methods passed suite-Homedepot_Automation_Test"> (hide)</a> <!-- hide-methods passed suite-Homedepot_Automation_Test -->
+                      <a href="#" panel-name="suite-Homedepot_Automation_Test" class="show-methods passed suite-Homedepot_Automation_Test"> (show)</a> <!-- show-methods passed suite-Homedepot_Automation_Test -->
                     </span>
-                    <div class="method-list-content failed suite-Homedepot_Automation_Test">
+                    <div class="method-list-content passed suite-Homedepot_Automation_Test">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Homedepot_Automation_Test" title="testcases.GoogleExcellSheetTest" class="method navigator-link" hash-for-method="verifygoggleExcelraeder">verifygoggleExcelraeder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Homedepot_Automation_Test -->
+                    </div> <!-- method-list-content passed suite-Homedepot_Automation_Test -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Homedepot_Automation_Test" class="panel Homedepot_Automation_Test">
-          <div class="suite-Homedepot_Automation_Test-class-failed">
+          <div class="suite-Homedepot_Automation_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">testcases.GoogleExcellSheetTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,14 +128,10 @@
                   <a name="verifygoggleExcelraeder">
                   </a> <!-- verifygoggleExcelraeder -->
                   <span class="method-name">verifygoggleExcelraeder</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at testcases.GoogleExcellSheetTest.verifygoggleExcelraeder(GoogleExcellSheetTest.java:21)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Homedepot_Automation_Test-class-failed -->
+          </div> <!-- suite-Homedepot_Automation_Test-class-passed -->
         </div> <!-- panel Homedepot_Automation_Test -->
         <div panel-name="test-xml-Homedepot_Automation_Test" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -146,7 +142,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;-1&quot; name=&quot;Homedepot Automation Test&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;useCloudEnv&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;useCloudEnv&quot; value=&quot;true&quot;/&gt;
   &lt;parameter name=&quot;os&quot; value=&quot;OS X&quot;/&gt;
   &lt;parameter name=&quot;os_version&quot; value=&quot;High Sierra&quot;/&gt;
   &lt;parameter name=&quot;browserVersion&quot; value=&quot;63.0&quot;/&gt;
@@ -199,12 +195,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifygoggleExcelraeder')
 data.setCell(0, 2, 'testcases.GoogleExcellSheetTest')
-data.setCell(0, 3, 33297);
+data.setCell(0, 3, 43958);
 window.suiteTableData['Homedepot_Automation_Test']= { tableData: data, tableDiv: 'times-div-Homedepot_Automation_Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-Homedepot_Automation_Test">
               </div> <!-- times-div-Homedepot_Automation_Test -->
             </div> <!-- times-div -->
@@ -232,34 +228,32 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testcases.GoogleExcellSheetTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@4d192aef)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@53830483)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(false, browserstack, OS X, High Sierra, chrome, 63.0, https://www.homedepot.com/)</span>
-                <span class="method-start">1039 ms</span>
+                <span class="method-name">setUp(true, browserstack, OS X, High Sierra, chrome, 63.0, https://www.homedepot.com/)</span>
+                <span class="method-start">1725 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">startExtent(public void testcases.GoogleExcellSheetTest.verifygoggleExcelraeder() throws java.io.IOException,jav...)</span>
-                <span class="method-start">11568 ms</span>
+                <span class="method-start">10554 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifygoggleExcelraeder</span>
-                <span class="method-start">11575 ms</span>
+                <span class="method-start">10560 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=verifygoggleExcelraeder status=FAILURE method=GoogleExcellSheetTest.verifygoggleExc...)</span>
-                <span class="method-start">44881 ms</span>
+                <span class="method-name">afterEachTestMethod([TestResult name=verifygoggleExcelraeder status=SUCCESS method=GoogleExcellSheetTest.verifygoggleExc...)</span>
+                <span class="method-start">54520 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">46904 ms</span>
+                <span class="method-start">55786 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">46946 ms</span>
+                <span class="method-start">55829 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
