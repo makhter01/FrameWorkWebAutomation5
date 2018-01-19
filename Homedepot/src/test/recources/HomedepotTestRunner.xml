@@ -12,10 +12,10 @@
     <test name = "HomeDepot HomepageTest">
 
         <classes>
-            <!--<class name="testcases.HomepageTest"/>-->
-           <!-- <class name="testcustomerfunc.MyAccountTest"/>-->
-            <class name="testcustomerfunc.SignInTest"/>
-            <!--<class name="testcases.SearchIteamByExcelTest"/>-->
+            <!--&lt;!&ndash;<class name="testcases.HomepageTest"/>&ndash;&gt;
+           &lt;!&ndash; <class name="testcustomerfunc.MyAccountTest"/>&ndash;&gt;
+            <class name="testcustomerfunc.SignInTest"/>-->
+            <class name="testcases.SearchIteamByExcelTest"/>
         </classes>
     </test>
 
