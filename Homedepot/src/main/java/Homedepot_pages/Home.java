@@ -5,18 +5,13 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class Home extends CommonAPI {
-    @FindBy(css = "#container>:nth-child(2) >.Header3 >div.grid.grid--center-verticle.Header3__collapser>div>div:nth-child(1)>a>svg>g>:nth-child(2)")
-    public static WebElement homedepLogo;
-
-    @FindBy(css = "a[class='TaskLinks__link']")
+    @FindBy(xpath = "//*[@id=\'container\']//div/ul/li[1]/a")
     public static WebElement findMystore;
 
     @FindBy(css = "#headerSearch")
@@ -25,13 +20,13 @@ public class Home extends CommonAPI {
     @FindBy(xpath = "//*[@id='headerSearchButton']")
     public static WebElement searchButton;
 
-    @FindBy(xpath = "//*[@id=\"headerCart\"]/div[1]/span[1]")
+    @FindBy(xpath = "//*[@id=\'headerCart\']/div[1]/span[1]")
     public static WebElement cart;
 
-    @FindBy(xpath = "//*[@id=\"container\"]//div/ul/li[2]/a")
+    @FindBy(xpath = "//*[@id=\'container\']//div/ul/li[2]/a")
     public static WebElement trackNToolRental;
 
-    @FindBy(css = " a[class='TaskLinks__link']")
+    @FindBy(xpath = "//*[@id=\"container\"]//div[2]/div/div[1]/div/ul/li[4]/a")
     public static WebElement giftCards;
 
     @FindBy(xpath = "//*[@id=\"container\"]//div[1]/div/ul/li[8]/a")
@@ -52,7 +47,7 @@ public class Home extends CommonAPI {
     @FindBy(css = "#myStore span.MyStore__label > div")
     public static WebElement chooseStore;
 
-    @FindBy(css = "#headerMyAccountTitle > div")
+    @FindBy(xpath = "//*[@id=\"headerMyAccountTitle\"]/div")
     public static WebElement accountButton;
 
     @FindBy(css = "#authSignIn span")
@@ -64,6 +59,9 @@ public class Home extends CommonAPI {
 
     @FindBy(xpath = "//*[@id=\"container\"]//div[4]/div/ul/li[1]")
     public static WebElement departments;
+
+    @FindBy(css = "#container > div .grid > div> div > :nth-child(1) > a > svg > g > :nth-child(4)")
+    public static WebElement homedepLogo;
 
 
     public String pageTitle() throws InterruptedException {
@@ -145,7 +143,8 @@ public class Home extends CommonAPI {
         return url;
     }
 
-    public static void clickAccount() {
+    public void clickAccount() throws InterruptedException {
+        sleepFor(10);
         accountButton.click();
     }
 

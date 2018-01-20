@@ -2,9 +2,7 @@ package testcases;
 
 import Homedepot_pages.Home;
 import Homedepot_pages.Lighting;
-import Homedepot_pages.SignIn;
-import base.CommonAPI;
-import org.openqa.selenium.UnhandledAlertException;
+import authentication.SignIn;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -32,7 +30,6 @@ public class HomepageTest extends Home {
 
     @Test(enabled = true)
     public void verifySearchBoxTest() {
-
         objHomePage.searchBox();
         String actualtext = objlight.getlightingHeader();
         String expectedtext = "Lighting";
@@ -43,7 +40,6 @@ public class HomepageTest extends Home {
     @Test(enabled = false)
     public void verifyHelpLinkStatusTest() {
         boolean actualStatus = objHomePage.verifyHelpLinkStatus();
-
         Assert.assertEquals(actualStatus, true);
         System.out.println(" HelpLink is enabled");
     }
@@ -138,7 +134,7 @@ public class HomepageTest extends Home {
 
 
     @Test(enabled = false)
-    public void checkAccountButton() {
+    public void checkAccountButton() throws InterruptedException {
         Home account = new Home();
         account.clickAccount();
     }

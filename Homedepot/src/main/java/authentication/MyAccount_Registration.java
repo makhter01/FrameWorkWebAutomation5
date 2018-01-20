@@ -1,12 +1,8 @@
-package Homedepot_pages;
+package authentication;
 
-import base.CommonAPI;
+import Homedepot_pages.Home;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyAccount_Registration extends Home {
     @FindBy(css = "#authRegister span")

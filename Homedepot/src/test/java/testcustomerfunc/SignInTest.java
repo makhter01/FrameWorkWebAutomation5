@@ -1,8 +1,7 @@
 package testcustomerfunc;
 
 import Homedepot_pages.Home;
-import Homedepot_pages.MyAccount_Registration;
-import Homedepot_pages.SignIn;
+import authentication.SignIn;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 

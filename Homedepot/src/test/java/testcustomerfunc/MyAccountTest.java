@@ -1,8 +1,7 @@
 package testcustomerfunc;
 
 import Homedepot_pages.Home;
-import Homedepot_pages.MyAccount_Registration;
-import Homedepot_pages.SignIn;
+import authentication.MyAccount_Registration;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,7 +19,7 @@ public class MyAccountTest extends MyAccount_Registration {
     @Test(enabled = false)
     public void verifyRegistrationTest() throws InterruptedException {
         //objHome.clickAccount();
-        objHome.
+                objHome.
                 sleepFor(5);
         objMyacc.newAccountRegistration();
     }
