@@ -34,5 +34,5 @@ public class MyAccount_Registration extends Home {
         confermPassword.sendKeys("abcd1234");
         zipcode.sendKeys("11432");
         registartionclickButton.click();
-        }
+    }
 }

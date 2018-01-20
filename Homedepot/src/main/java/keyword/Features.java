@@ -9,13 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
 
-public class Features extends CommonAPI{
-    public void signIn(){
+public class Features extends CommonAPI {
+    public void signIn() {
         typeByCss("", "userName");
         typeByCss("", "password");
         clickByCss("");
     }
-    public void registration(){
+
+    public void registration() {
         typeByCss("", "email");
         typeByCss("", "password");
         clickByCss("");
@@ -26,8 +27,8 @@ public class Features extends CommonAPI{
         searchPage.searchItemsAndSubmitButton();
     }
 
-    public void select(String featureName)throws IOException{
-        switch(featureName){
+    public void select(String featureName) throws IOException {
+        switch (featureName) {
             case "signIn":
                 signIn();
                 break;
@@ -42,10 +43,10 @@ public class Features extends CommonAPI{
         }
     }
 
-    public void selectFeatures()throws IOException{
+    public void selectFeatures() throws IOException {
         IteamsToBeSearch itemsToBeSearched = new IteamsToBeSearch();
-        String [] testSteps = itemsToBeSearched.getDataFromExcelFileForFeaturesChoice();
-        for(int i=0; i<testSteps.length; i++) {
+        String[] testSteps = itemsToBeSearched.getDataFromExcelFileForFeaturesChoice();
+        for (int i = 0; i < testSteps.length; i++) {
             select(testSteps[i]);
         }
     }
