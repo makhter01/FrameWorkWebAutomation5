@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.List;
 
-public class GoogleExcellSheetTest extends GoogleExcelSheetPages{
+public class GoogleExcellSheetTest extends GoogleExcelSheetPages {
     @Test
     public void verifygoggleExcelraeder() throws IOException, InterruptedException {
         int i = 0;

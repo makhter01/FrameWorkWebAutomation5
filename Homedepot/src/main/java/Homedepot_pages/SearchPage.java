@@ -8,7 +8,7 @@ import reporting.TestLogger;
 
 import java.io.IOException;
 
-public class SearchPage extends CommonAPI{
+public class SearchPage extends CommonAPI {
     @FindBy(css = "#headerSearch")
     public static WebElement searchInputWebElement;
 
@@ -23,23 +23,30 @@ public class SearchPage extends CommonAPI{
         return submitButtonWebElement;
     }
 
-    public void searchFor(String value){
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName())+" "+ value);
+    public void searchFor(String value) {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()) + " " + value);
         getSearchInputWebElement().sendKeys(value);
     }
-    public void submitSearchButton(){
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
+    public void submitSearchButton() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getSubmitButtonWebElement().click();
     }
-    public void clearInput(){
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+
+    public void clearInput() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getSearchInputWebElement().clear();
     }
-    public void searchItemsAndSubmitButton()throws IOException {
-        TestLogger.log(getClass().getSimpleName() + ": " + (new Object(){}.getClass().getEnclosingMethod().getName()));
+
+    public void searchItemsAndSubmitButton() throws IOException {
+        TestLogger.log(getClass().getSimpleName() + ": " + (new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         IteamsToBeSearch searchByIteam = new IteamsToBeSearch();
-        String [] value =searchByIteam.getDataFromExcelFile();
-        for(int i=0; i<value.length; i++) {
+        String[] value = searchByIteam.getDataFromExcelFile();
+        for (int i = 0; i < value.length; i++) {
             searchFor(value[i]);
             submitSearchButton();
             clearInput();

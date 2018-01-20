@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class FeaturesTest extends Features{
+public class FeaturesTest extends Features {
     @Test
-    public void testFeatures()throws IOException {
+    public void testFeatures() throws IOException {
         selectFeatures();
     }
 

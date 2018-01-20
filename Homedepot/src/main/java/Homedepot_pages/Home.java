@@ -44,7 +44,7 @@ public class Home extends CommonAPI {
     @FindBy(css = "#myStore span.MyStore__label > div")
     public static WebElement chooseStore;
 
-    @FindBy(xpath="//*[@id=\"headerMyAccountTitle\"]/div")
+    @FindBy(xpath = "//*[@id=\"headerMyAccountTitle\"]/div")
     public static WebElement accountButton;
 
     @FindBy(css = "#authSignIn span")
@@ -66,6 +66,7 @@ public class Home extends CommonAPI {
         return title;
 
     }
+
     public String isLogoVisible() {
         String logo = homedepLogo.getText();
         return logo;
