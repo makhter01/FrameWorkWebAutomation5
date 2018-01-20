@@ -10,16 +10,16 @@ public class SignInTest extends SignIn {
     Home objHome;
     SignIn objsignIn;
 
-    public void intialization(){
+    public void intialization() {
         objHome = PageFactory.initElements(driver, Home.class);
-        objsignIn=PageFactory.initElements(driver,SignIn.class);
-        }
+        objsignIn = PageFactory.initElements(driver, SignIn.class);
+    }
 
     @Test(enabled = true)
-    public void verifySignInTest() throws InterruptedException{
-       objHome.navigateTosignIn();
+    public void verifySignInTest() throws InterruptedException {
+        objHome.navigateTosignIn();
         sleepFor(5);
         objsignIn.signInAccount();
-        }
+    }
 
 }

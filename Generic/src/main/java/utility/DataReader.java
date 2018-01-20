@@ -104,7 +104,6 @@ public class DataReader {
         sheet = wb.createSheet();
         Row row = sheet.createRow(rowNum);
         row.setHeightInPoints(10);
-
         fio = new FileOutputStream(new File("ExcelFile.xls"));
         wb.write(fio);
         for(int i=0; i<row.getLastCellNum(); i++){
@@ -114,5 +113,4 @@ public class DataReader {
         fio.close();
         wb.close();
     }
-
 }

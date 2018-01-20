@@ -1,7 +1,6 @@
 package Homedepot_pages;
 
 import base.CommonAPI;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -56,7 +55,7 @@ public class Home extends CommonAPI {
     @FindBy(css = "#headerMyAccountTitle > div")
     public static WebElement accountButton;
 
-    @FindBy(css="#authSignIn span")
+    @FindBy(css = "#authSignIn span")
     public static WebElement signInButton;
 
     @FindBy(css = "#authRegister > a > span")
@@ -73,8 +72,8 @@ public class Home extends CommonAPI {
 
     }
 
-    public String isLogoVisible(){
-        String logo=homedepLogo.getText();
+    public String isLogoVisible() {
+        String logo = homedepLogo.getText();
         return logo;
     }
 
@@ -150,7 +149,7 @@ public class Home extends CommonAPI {
         accountButton.click();
     }
 
-    public  void navigateTosignIn() {
+    public void navigateTosignIn() {
         accountButton.click();
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
@@ -160,12 +159,12 @@ public class Home extends CommonAPI {
 
     }
 
-    public  void clickRegister() {
+    public void clickRegister() {
         accountButton.click();
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
-            }
-            new WebDriverWait(driver, 50).until(ExpectedConditions.elementToBeClickable(registerButton));
+        }
+        new WebDriverWait(driver, 50).until(ExpectedConditions.elementToBeClickable(registerButton));
         registerButton.click();
     }
 }

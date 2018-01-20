@@ -12,18 +12,17 @@ public class MyAccountTest extends MyAccount_Registration {
     MyAccount_Registration objMyacc;
 
     @BeforeMethod
-    public void intialization(){
+    public void intialization() {
         objHome = PageFactory.initElements(driver, Home.class);
-        objMyacc= PageFactory.initElements(driver,MyAccount_Registration.class);
+        objMyacc = PageFactory.initElements(driver, MyAccount_Registration.class);
     }
 
     @Test(enabled = false)
-    public void verifyRegistrationTest() throws InterruptedException{
+    public void verifyRegistrationTest() throws InterruptedException {
         //objHome.clickAccount();
         objHome.
-        sleepFor(5);
+                sleepFor(5);
         objMyacc.newAccountRegistration();
     }
-
 
 }
