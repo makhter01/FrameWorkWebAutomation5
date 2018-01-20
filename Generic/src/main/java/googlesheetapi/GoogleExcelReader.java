@@ -42,6 +42,7 @@ public class GoogleExcelReader {
             System.exit(1);
         }
     }
+
     /**
      * Creates an authorized Credential object.
      *
@@ -62,6 +63,7 @@ public class GoogleExcelReader {
         System.out.println("Credentials saved to " + DATA_STORE_DIR.getAbsolutePath());
         return credential;
     }
+
     /**
      * Build and return an authorized Sheets API client service.
      *

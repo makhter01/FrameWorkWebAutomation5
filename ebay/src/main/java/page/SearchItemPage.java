@@ -13,24 +13,24 @@ import java.util.concurrent.TimeUnit;
 import static page.Home_Page.AllCategoryDropDown;
 
 public class SearchItemPage extends CommonAPI {
-    @FindBy( id = "gh-ac")
+    @FindBy(id = "gh-ac")
     public static WebElement searchBar;
-    @FindBy( xpath="//*[@id=\"Center\"]/div[1]/div/div[2]/div[1]/a/div[2]/div")
+    @FindBy(xpath = "//*[@id=\"Center\"]/div[1]/div/div[2]/div[1]/a/div[2]/div")
     public static WebElement samsungTablet;
-    @FindBy( xpath="//a[text()= 'Add to cart']")
+    @FindBy(xpath = "//a[text()= 'Add to cart']")
     public static WebElement addToCart;
-    @FindBy( id="gh-cart-n")
+    @FindBy(id = "gh-cart-n")
     public static WebElement clicktoShoppingCart;
-    @FindBy( id="ptcBtnBottom")
+    @FindBy(id = "ptcBtnBottom")
     public static WebElement clickProceedtoCheckout;
 
-    public void searchbyCapLetter(){
+    public void searchbyCapLetter() {
         Actions searchcap = new Actions(driver);
         searchcap.moveToElement(searchBar).click().keyDown(Keys.SHIFT).sendKeys("samsung").build().perform();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
-    public void searchItem() {
-        //String parentWindow = driver.getWindowHandle();
+
+    public void searchItem1() {
         searchBar.sendKeys("tablet samsung", Keys.ENTER);
         System.out.println("Get Product Search Page Title: " + driver.getTitle());
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -46,5 +46,12 @@ public class SearchItemPage extends CommonAPI {
         System.out.println("Get proceed to checkout Page Title: " + driver.getTitle());
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.navigate().back();
+    }
+
+    public void searchItem() {
+        searchBar.sendKeys("tablet samsung", Keys.ENTER);
+        System.out.println("Get Product Search Page Title: " + driver.getTitle());
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        samsungTablet.click();
     }
 }

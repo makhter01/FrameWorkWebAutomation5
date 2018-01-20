@@ -22,3 +22,5 @@ test-output/
 
 ### Mac
 .DS_Store
+/Homedepot/.credentials/
+/ebay/.credentials/

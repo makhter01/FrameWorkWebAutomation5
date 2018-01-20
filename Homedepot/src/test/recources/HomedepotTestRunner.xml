@@ -18,7 +18,12 @@
             <class name="testcases.SearchIteamByExcelTest"/>
         </classes>
     </test>
-
+        <test name="Automation 2" preserve-order="true" >
+        <classes>
+           <class name="testseachItem.SearchBarTest"/>
+        </classes>
+    </test>
 </suite>
+
 
 

@@ -24,7 +24,7 @@ public class ExtentManager {
         return extent;
     }
 
-    public static void setOutputDirectory(ITestContext context){
+    public static void setOutputDirectory(ITestContext context) {
         ExtentManager.context = context;
 
     }

@@ -5,7 +5,11 @@ import utility.DataReader;
 
 import java.io.IOException;
 
+<<<<<<< HEAD
 public class SearchIteamByExcel extends CommonAPI{
+=======
+public class SearchIteamByExcel extends CommonAPI {
+>>>>>>> mehzabin_team5
     DataReader dtr = new DataReader();
 
     public String[] getExcelData(String fileName) throws IOException {
@@ -33,5 +37,9 @@ public class SearchIteamByExcel extends CommonAPI{
         }
         return actual;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> mehzabin_team5
 }
 

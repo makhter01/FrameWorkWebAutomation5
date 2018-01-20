@@ -33,6 +33,12 @@ public class InputExcelSheet extends CommonAPI {
         }
         return actual;
     }
+
+    public String[] searchExcelData(String fileName) throws IOException {
+        String path = "../ebay/data/" + fileName;
+        String[] output = dtr.colReader(path, 2);
+        return output;
+    }
 }
 
 

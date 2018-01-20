@@ -21,12 +21,11 @@ public class Registration extends CommonAPI {
     public static WebElement enterPassword;
     @FindBy( xpath="//*[@id=\"showPASSWORD\"]//span[1]")
     public static WebElement showPassword;
-    @FindBy( id="ppaFormSbtBtn")
+    @FindBy( xpath="//*[@id=\"ppaFormSbtBtn\"]")
     public static WebElement FormSbtBtn;
-    @FindBy( id="gh-ug")
-    public static WebElement hiuserName;
 
-    public void clickRegistrationLink(){
+    public void clickRegistrationLink() throws InterruptedException {
+        sleepFor(1);
         regLink.click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         enterFrsName.sendKeys("Salnam");
@@ -34,7 +33,7 @@ public class Registration extends CommonAPI {
         enterEmail.sendKeys("salman27271965@gmail.com");
         enterPassword.sendKeys("2727salman");
         showPassword.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         FormSbtBtn.click();
     }
 }

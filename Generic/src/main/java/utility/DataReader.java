@@ -38,11 +38,10 @@ public class DataReader {
                 data[i][j] = cellData;
             }
         }
-        return data;
+        return  data;
     }
-
-    public String[] fileReader(String path) throws IOException {
-        String[] data = {};
+    public String[] fileReader(String path)throws IOException{
+        String []  data = {};
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);
         wb = new HSSFWorkbook(fis);
@@ -105,7 +104,6 @@ public class DataReader {
         sheet = wb.createSheet();
         Row row = sheet.createRow(rowNum);
         row.setHeightInPoints(10);
-
         fio = new FileOutputStream(new File("ExcelFile.xls"));
         wb.write(fio);
         for(int i=0; i<row.getLastCellNum(); i++){
@@ -115,5 +113,4 @@ public class DataReader {
         fio.close();
         wb.close();
     }
-
 }

@@ -8,12 +8,11 @@ import reporting.TestLogger;
 
 import java.io.IOException;
 
-public class SearchPage extends CommonAPI
-{
-    @FindBy(how = How.CSS, using ="##gh-ac")
+public class SearchPage extends CommonAPI {
+    @FindBy(how = How.CSS, using = "##gh-ac")
     public static WebElement searchInputWebElement;
 
-    @FindBy(how = How.CSS, using ="#gh-btn")
+    @FindBy(how = How.CSS, using = "#gh-btn")
     public static WebElement submitButtonWebElement;
 
     public static WebElement getSearchInputWebElement() {
@@ -36,11 +35,13 @@ public class SearchPage extends CommonAPI
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getSearchInputWebElement().clear();
     }
-    public void searchItemsAndSubmitButton()throws IOException {
-        TestLogger.log(getClass().getSimpleName() + ": " + (new Object(){}.getClass().getEnclosingMethod().getName()));
+
+    public void searchItemsAndSubmitButton() throws IOException {
+        TestLogger.log(getClass().getSimpleName() + ": " + (new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         ItemsToBeSearched itemsToBeSearched = new ItemsToBeSearched();
-        String [] value = itemsToBeSearched.getDataFromExcelFile();
-        for(int i=0; i<value.length; i++) {
+        String[] value = itemsToBeSearched.getDataFromExcelFile();
+        for (int i = 0; i < value.length; i++) {
             searchFor(value[i]);
             submitSearchButton();
             clearInput();
