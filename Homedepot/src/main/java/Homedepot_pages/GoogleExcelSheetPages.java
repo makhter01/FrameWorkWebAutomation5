@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static googlesheetapis.GoogleExcelRaeder.getSheetsService;
+import static googlesheetapis.GoogleExcelReader.getSheetsService;
 
 public class GoogleExcelSheetPages extends CommonAPI {
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {

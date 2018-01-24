@@ -12,7 +12,6 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
-import com.google.api.services.sheets.v4.model.ValueRange;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class GoogleExcelRaeder {
+public class GoogleExcelReader {
     // Application name.
     private static final String APPLICATION_NAME = "Google Sheets API Java GoogleSheetReader";
     // Directory to store user credentials for this application.
@@ -52,7 +51,7 @@ public class GoogleExcelRaeder {
      */
     public static Credential authorize() throws IOException {
         // Load client secrets.
-        InputStream in = GoogleExcelRaeder.class.getResourceAsStream("/client_secret.json");
+        InputStream in = GoogleExcelReader.class.getResourceAsStream("/client_secret.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
         // Build flow and trigger user authorization request.
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(

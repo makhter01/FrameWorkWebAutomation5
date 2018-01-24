@@ -2,17 +2,10 @@ package googlesheet;
 
 import base.CommonAPI;
 import com.google.api.services.sheets.v4.Sheets;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
 import java.io.IOException;
-import java.time.temporal.ValueRange;
 import java.util.ArrayList;
 import java.util.List;
-
-import static googlesheetapi.GoogleExcelReader.getSheetsService;
-import static org.openqa.selenium.support.How.ID;
-import static org.openqa.selenium.support.How.XPATH;
+import static googlesheetapis.GoogleExcelReader.getSheetsService;
 
 public class GoogleSheet extends CommonAPI {
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
