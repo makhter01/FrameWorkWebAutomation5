@@ -12,6 +12,9 @@
         <module>Generic</module>
         <module>Homedepot</module>
         <module>ebay</module>
+        <module>BankOfAmerica</module>
+        <module>RestAPI</module>
+        <module>whatsApp</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -24,6 +27,11 @@
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-server</artifactId>
                 <version>3.7.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.rest-assured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>3.0.3</version>
             </dependency>
             <dependency>
                 <groupId>org.testng</groupId>

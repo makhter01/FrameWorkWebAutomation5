@@ -24,8 +24,8 @@ public class HomepageTest extends Home {
 
     @Test(enabled = true)
     public void veifyTitle() throws InterruptedException {
-        String actulaTitle = objHomePage.pageTitle();
-        String expectedTitle = "The Home Depot ";
+        String actulaTitle = getCurrentPageTitle();
+        String expectedTitle = "The Home Depot";
         Assert.assertTrue(actulaTitle.contains(expectedTitle));
 
     }
@@ -128,7 +128,7 @@ public class HomepageTest extends Home {
 
     @Test(enabled = true)
     public void verifyURL() throws InterruptedException {
-        String actualUrl = objHomePage.currentURL();
+        String actualUrl = getCurrentPageUrl();
         String expectedUrl = "https://www.homedepot.com/";
         Assert.assertEquals(actualUrl, expectedUrl);
         System.out.println("Url varification passed");
