@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 
 public class HomepageTest extends Home {
     Home objHomePage;
@@ -21,8 +23,7 @@ public class HomepageTest extends Home {
         objlight = PageFactory.initElements(driver, Lighting.class);
     }
 
-
-    @Test(enabled = true)
+   @Test(enabled = true)
     public void veifyTitle() throws InterruptedException {
         String actulaTitle = getCurrentPageTitle();
         String expectedTitle = "The Home Depot";
@@ -140,6 +141,41 @@ public class HomepageTest extends Home {
         Home account = new Home();
         account.clickAccount();
     }
+    @Test(enabled = true)
+    public void LinkTest(){
+        collectLink();
+    }
+     @Test(enabled = true)
+    public void brokenLinkTest() throws IOException{
+        brokenLinkNImage();
+    }
+      @Test(enabled = true)
+    public void highlightTest(){
+        flushHighlight();
+
+    }
+     @Test(enabled =true)
+    public void drawBorderTest(){
+          drawBorder();
+
+    }
+
+    @Test(enabled = true)
+    public void jvScriptAccountTest(){
+        clickAccountJvScript();
+    }
+
+    @Test
+    public void scrollPageTest(){
+        scrolldownPage(driver);
+    }
+
+    @Test
+    public void scrollInViewTest(){
+        scrollIntoView();
+    }
+
+
 }
 
 

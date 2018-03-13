@@ -1,15 +1,21 @@
 package Homedepot_pages;
 
 import base.CommonAPI;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 
 public class Home extends CommonAPI {
@@ -55,7 +61,7 @@ public class Home extends CommonAPI {
     @FindBy(css = "#headerMyAccountTitle > div")
     public static WebElement accountButton;
 
-    @FindBy(css="#authSignIn span")
+    @FindBy(css = "#authSignIn > a > span")
     public static WebElement signInButton;
 
     @FindBy(css = "#authRegister > a > span")
@@ -65,6 +71,9 @@ public class Home extends CommonAPI {
     @FindBy(xpath = "//*[@id=\"container\"]//div[4]/div/ul/li[1]")
     public static WebElement departments;
 
+    @FindBy(xpath = "//*[@id=\'container\']/div[3]/footer/div[2]/nav[2]/ul/li[1]/a")
+    public static WebElement specialOffers;
+
 
     public String pageTitle() throws InterruptedException {
         String title = driver.getTitle();
@@ -72,8 +81,8 @@ public class Home extends CommonAPI {
 
     }
 
-    public String isLogoVisible(){
-        String logo=homedepLogo.getText();
+    public String isLogoVisible() {
+        String logo = homedepLogo.getText();
         return logo;
     }
 
@@ -145,26 +154,152 @@ public class Home extends CommonAPI {
         return url;
     }
 
+    public void collectLink() {
+        List<WebElement> linklst = driver.findElements(By.tagName("a"));
+        int totalLink = linklst.size();
+        for (int i = 0; i < totalLink; i++) {
+            String linkText = linklst.get(i).getText();
+            System.out.println(linkText);
+        }
+        System.out.println(totalLink);
+    }
+
+    // how can find broken kinks in the page
+    public void brokenLinkNImage() throws IOException {
+        List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+        allLinks.addAll(driver.findElements(By.tagName("img")));
+        System.out.println("Size of total links and image " + allLinks.size());
+
+        List<WebElement> activeLinks = new ArrayList<WebElement>();
+        for (int i = 0; i < allLinks.size(); i++) {
+            if (allLinks.get(i).getAttribute("href") != null && (!allLinks.contains("javascript"))) {
+                activeLinks.add(allLinks.get(i));
+            }
+        }
+        System.out.println("Size of active links " + activeLinks.size());
+        for (int j = 0; j < activeLinks.size(); j++) {
+            try {
+                HttpURLConnection connection = (HttpURLConnection) new URL(activeLinks.get(j).getAttribute("href")).openConnection();
+                connection.connect();
+                String response = connection.getResponseMessage();
+                connection.disconnect();
+                System.out.println(activeLinks.get(j).getAttribute("href") + "----->" + response);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
     public static void clickAccount() {
         accountButton.click();
     }
 
-    public  void navigateTosignIn() {
+    public void javaScriptExecutorByClick(WebElement element, WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public void clickAccountJvScript() {
+        javaScriptExecutorByClick(accountButton, driver);
+    }
+
+    // how to highlight in selenium
+
+    public void highlight(WebElement element, WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String bgcolor = element.getCssValue("backgroundColor");
+        for (int i = 0; i < 10; i++) {
+            changeColor("rgb(0,200,0", element, driver);
+            changeColor(bgcolor, element, driver);
+        }
+
+    }
+
+
+    public void changeColor(String color, WebElement element, WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].style.backgroundColor='" + color + "'", element);
+        try {
+            Thread.sleep(20);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void flushHighlight() {
+        highlight(accountButton, driver);
+    }
+
+    // how to make border.
+    public void drawBorderHelper(WebElement element, WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].style.border='3px solid red'", element);
+    }
+
+    public void drawBorder() {
+        drawBorderHelper(departments, driver);
+    }
+
+    public void navigateTosignIn(WebDriver driver) throws InterruptedException {
+        accountButton.click();
+        sleepFor(10);
+        String MainWindow = driver.getWindowHandle();
+        System.out.println(MainWindow);
+        Set<String> handles = driver.getWindowHandles();
+        Iterator<String> it = handles.iterator();
+        signInButton.click();
+        String ChildWindow = null;
+        while (it.hasNext()) {
+            ChildWindow = it.next();
+
+
+            if (MainWindow.equalsIgnoreCase(ChildWindow)) {
+
+                // Switching to Child window
+                driver.switchTo().window(ChildWindow);
+                System.out.println(ChildWindow);
+                driver.findElement(By.cssSelector("#email_id"))
+                        .sendKeys("testuser@gmail.com");
+
+                driver.findElement(By.cssSelector("#password")).sendKeys("abcd1234");
+                driver.findElement(By.cssSelector("#accountSignIn > span")).click();
+                generateAlert(driver, "this is autogenerated message");
+
+            }
+        }
+
+    }
+
+    // how to generate a alert
+
+    public void generateAlert(WebDriver driver, String message) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("alert('" + message + "')");
+    }
+
+    public void clickRegister() {
         accountButton.click();
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
         }
-        new WebDriverWait(driver, 50).until(ExpectedConditions.elementToBeClickable(signInButton));
-        signInButton.click();
+        new WebDriverWait(driver, 50).until(ExpectedConditions.elementToBeClickable(registerButton));
+        registerButton.click();
+    }
+
+
+    public void scrolldownPage(WebDriver driver) {
+            JavascriptExecutor js=(JavascriptExecutor)driver;
+            js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+    }
+    public void scrollIntoViewHelper(WebDriver driver,WebElement element){
+        JavascriptExecutor js=(JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView(true)",element);
 
     }
 
-    public  void clickRegister() {
-        accountButton.click();
-        for (String handle : driver.getWindowHandles()) {
-            driver.switchTo().window(handle);
-            }
-            new WebDriverWait(driver, 50).until(ExpectedConditions.elementToBeClickable(registerButton));
-        registerButton.click();
+    public void scrollIntoView(){
+        scrollIntoViewHelper(driver,specialOffers);
+
     }
 }

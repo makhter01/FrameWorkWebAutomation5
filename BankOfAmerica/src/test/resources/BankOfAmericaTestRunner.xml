@@ -4,6 +4,7 @@
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="mac"/>
+    <parameter name="os_version" value="High Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="63.0"/>
     <parameter name="url" value="https://www.bankofamerica.com/"/>
@@ -11,8 +12,8 @@
     <test name = "BankofAmerica Automation ">
         <classes>
             <class name="testPages.TestHome"/>
-            <class name="testPages.TestAccount"/>
-            <class name="testPages.TestCreditCards"/>
+           <!-- <class name="testPages.TestAccount"/>
+            <class name="testPages.TestCreditCards"/>-->
         </classes>
     </test>
 

@@ -64,7 +64,7 @@ public class SignIn extends CommonAPI{
     }
 
 
-    public static void  signInAccount(){
+    public void  signInAccount(){
 
         sinInEmailBox.sendKeys("abcd@gmail.com", Keys.ENTER);
       signInPasswordBox.sendKeys("abcd",Keys.ENTER);

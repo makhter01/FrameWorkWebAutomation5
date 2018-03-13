@@ -16,7 +16,7 @@ public class TestMainPage extends MainPage{
     }
 
     // whatsApp_TC_001  Verify URL
-    @Test(priority = 1, enabled = false)
+    @Test(priority = 1, enabled = true)
     public void verifyCurrentURL() {
         String expectedURL = "whatsapp.com";
         Assert.assertTrue(currentURL().contains(expectedURL));
@@ -24,7 +24,7 @@ public class TestMainPage extends MainPage{
     }
 
     // whatsApp_TC_002   Verify title of page
-    @Test(priority = 2, enabled = false)
+    @Test(priority = 2, enabled = true)
     public void verifyCurrentTitle() {
         String actualtitle = mainpageObj.currentTitle();
         String expectedtitle = "WhatsApp";
@@ -33,7 +33,7 @@ public class TestMainPage extends MainPage{
     }
 
     // whatsApp_TC_003  Verify whatsApp logo on main page
-    @Test(priority = 3, enabled = false)
+    @Test(priority = 3, enabled = true)
     public void verifyWhatsAppLogoDisplayed() {
         boolean whatspplogoimage = mainpageObj.whatsAppLogoDispayed();
         Assert.assertTrue(whatspplogoimage);
@@ -41,7 +41,7 @@ public class TestMainPage extends MainPage{
     }
 
     // WhatsApp_TC_004  Verify WhatsAPP WebLink on  main page
-    @Test(priority = 4, enabled = false)
+    @Test(priority = 4, enabled = true)
     public void verifyWhatsAppWebLink() {
         boolean weblink = mainpageObj.whatsAppWebLinkDisplayed();
         Assert.assertTrue(weblink);
@@ -49,7 +49,7 @@ public class TestMainPage extends MainPage{
     }
 
     // WhatApp_TC_005  Verify download link is clickable on main page
-    @Test(priority = 5, enabled = false)
+    @Test(priority = 5, enabled = true)
     public void verifydownloadLinkClickableOnMainPage() {
         String expectedUrl = "whatsapp.com/download/";
         Assert.assertTrue(downloadLinkClickableOnMainPage().contains(expectedUrl));
@@ -63,7 +63,7 @@ public void verifyDropdownListSize(){
     System.out.println("Size of drop down list passed");
 }*/
 // WhatsApp_TC_007  Verify phone image on main Page
-    @Test(priority = 7, enabled = false)
+    @Test(priority = 7, enabled = true)
     public void verifyphoneImageDispalyed() {
         boolean heroimage = mainpageObj.phoneImageDispalyed();
         Assert.assertTrue(heroimage);
@@ -71,13 +71,13 @@ public void verifyDropdownListSize(){
     }
 
 // WhatsApp_TC_008 Verify WebLink click and its current url
-/*@Test(priority = 8, enabled = true)
+@Test(priority = 8, enabled = true)
 public void verifyClickWhatAppWebLink() {
     String actualvalue = mainpageObj.clickWhatsAppWebLink();
     String expectedvalue = "https://web.whatsapp.com/";
     Assert.assertEquals(actualvalue, expectedvalue);
     //Assert.assertTrue(actualvalue.contains(expectedvalue));
     System.out.print("The Web Link url verification passed");
-}*/
+}
 
 }

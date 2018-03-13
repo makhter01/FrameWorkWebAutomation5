@@ -10,7 +10,7 @@ import java.util.List;
 public class Testgooglesheet extends GoogleSheet{
 
    // Search multiple items by name from a google sheets file
-        @Test
+        @Test(enabled =true)
         public void verifyGoogleSheet() throws IOException, InterruptedException {
             int i = 0;
             String spreadsheetId = "1mPYFCCIuG4ZW2BLL6uyQW44Ril8yg8Pp69ErRKhd1aw";

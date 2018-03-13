@@ -4,6 +4,7 @@ import base.CommonAPI;
 import mainPages.Home;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,7 @@ public class TestHome extends Home{
         homeObject= PageFactory.initElements(driver,Home.class);
     }
 
-    @Test(enabled = true)
+    @Test(enabled =true)
     public void verifyTitle() throws InterruptedException{
          String actualTitle=getCurrentPageTitle();
          String expectedTitle="Bank of America";
@@ -24,14 +25,15 @@ public class TestHome extends Home{
 
     }
 
-    @Test(enabled = true)
-    public void verifyUrl() throws InterruptedException{
+    @Test
+    public void verifyUrl() {
          String actualUrl=getCurrentPageUrl();
          String expectedUrl="https://www.bankofamerica.com/";
          Assert.assertTrue(actualUrl.contains(expectedUrl));
         System.out.println("Homepage url varified");
+        throw new SkipException("this test would be skipped"); // testng skip exception use for control the flow of execution
     }
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void verifyPersonalButton(){
         boolean result=homeObject.isPersonalTextLinkenable();
         Assert.assertEquals(result,true);
@@ -39,7 +41,7 @@ public class TestHome extends Home{
 
     }
 
-    @Test(enabled = true)
+   /* @Test(enabled = true)
     public void verifyisSmallBusinessEnabled(){
          boolean actualresult= homeObject.isPersonalTextLinkenable();
            Assert.assertEquals(actualresult,true);
@@ -111,6 +113,6 @@ public class TestHome extends Home{
         Assert.assertTrue(actualtext.contains(expectedtext));
 
     }
-
+*/
 
 }

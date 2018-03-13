@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class GoogleExcellSheetTest extends GoogleExcelSheetPages {
-    @Test
+    @Test(enabled = true)
     public void verifygoggleExcelraeder() throws IOException, InterruptedException {
         int i = 0;
         String spreadsheetId = "1V4QjFNgr21KHvYPTbfscX0t9LDnE8lUrK07KttwLmUI";

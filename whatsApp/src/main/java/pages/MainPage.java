@@ -34,11 +34,11 @@ public class MainPage extends CommonAPI {
         boolean actualresult = whatsappLogo.isDisplayed();
         return actualresult;
     }
-    public void clickWhatsAppWebLink(){
+    public String clickWhatsAppWebLink(){
         whatsappweblink.click();
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //String url = driver.getCurrentUrl();
-        // return url;
+        String url = driver.getCurrentUrl();
+         return url;
     }
 
     public boolean whatsAppWebLinkDisplayed() {

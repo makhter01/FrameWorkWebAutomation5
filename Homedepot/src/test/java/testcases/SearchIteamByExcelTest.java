@@ -18,7 +18,7 @@ public class SearchIteamByExcelTest extends SearchIteamByExcel{
     }
 
     // Search multiple items by Name from a xls file
-    @Test
+    @Test(enabled = true)
     public void verifyDataReaderExcel() throws IOException, InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));

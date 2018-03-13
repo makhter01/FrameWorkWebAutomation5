@@ -18,7 +18,7 @@ public class TestCreditCards extends CreditCards{
         homeobj= PageFactory.initElements(driver,Home.class);
         creditCardsobj=PageFactory.initElements(driver,CreditCards.class);
     }
-    @Test(enabled = false)
+    @Test(enabled = true)
      public void applyCreditCards() throws InterruptedException{
         homeobj.creditCardApply();
         creditCardsobj.personalCreditCards();
