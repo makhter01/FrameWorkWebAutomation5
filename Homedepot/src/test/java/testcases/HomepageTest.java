@@ -23,7 +23,7 @@ public class HomepageTest extends Home {
         objlight = PageFactory.initElements(driver, Lighting.class);
     }
 
-   @Test(enabled = true)
+  /* @Test(enabled = true)
     public void veifyTitle() throws InterruptedException {
         String actulaTitle = getCurrentPageTitle();
         String expectedTitle = "The Home Depot";
@@ -70,7 +70,7 @@ public class HomepageTest extends Home {
 
     }
 
-    @Test(enabled = true)
+    @Test(groups = {"somke test"})
     public void verifyCreditCardTest() {
         boolean actualStatus = objHomePage.verifyCreditCard();
         Assert.assertEquals(actualStatus, true);
@@ -153,8 +153,8 @@ public class HomepageTest extends Home {
     public void highlightTest(){
         flushHighlight();
 
-    }
-     @Test(enabled =true)
+    }*/
+    /* @Test(enabled =true)
     public void drawBorderTest(){
           drawBorder();
 
@@ -173,6 +173,16 @@ public class HomepageTest extends Home {
     @Test
     public void scrollInViewTest(){
         scrollIntoView();
+    }
+
+    @Test(groups = {"smoke"})
+    public void registrationTest()throws InterruptedException{
+        objHomePage.clickRegister(driver);
+    }*/
+     @Test
+    public void rightclickTest(){
+         rightclick();
+
     }
 
 

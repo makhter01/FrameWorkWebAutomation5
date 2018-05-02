@@ -15,6 +15,7 @@
         <module>BankOfAmerica</module>
         <module>RestAPI</module>
         <module>whatsApp</module>
+        <module>PHPDemo</module>
     </modules>
     <dependencyManagement>
         <dependencies>

@@ -8,16 +8,16 @@ public class IteamsToBeSearch extends DataReader {
 
     DataReader dr = new DataReader();
 
-    public String[] getDataFromExcelFile() throws IOException {
-        String path = System.getProperty("user.dir") + "data/HomeDepotDataExcellSheet.xls";
+  /*  public String[] getDataFromExcelFile() throws IOException {
+        String path = System.getProperty("user.dir") + "../Homedepot/data/";
         String[] data = dr.fileReader(path);
         return data;
     }
 
     public String[] getDataFromExcelFileForFeaturesChoice() throws IOException {
-        String path = System.getProperty("user.dir") + "data/HomeDepotDataExcellSheet.xls";
+        String path = System.getProperty("user.dir") + "../Homedepot/data/";
         String[] data = dr.fileReader(path);
         return data;
-    }
+    }*/
 
 }

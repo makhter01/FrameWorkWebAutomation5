@@ -59,7 +59,6 @@ public class DataReader {
         }
         return data;
     }
-
     public String[] colReader(String path, int col) throws IOException {
         String[] data = {};
         File file = new File(path);

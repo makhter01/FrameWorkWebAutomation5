@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Homedepot Automation" parallel="false">
+<suite name="Homedepot Automation" parallel="tests" thread-count="4">
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="mac"/>
@@ -10,18 +10,29 @@
     <parameter name="browserVersion" value="63.0"/>
     <parameter name="url" value="https://www.homedepot.com/"/>
 
-    <test name = "HomeDepot HomepageTest">
+    <test name = "HomeDepot HomepageTest" parallel="classes" thread-count="4">
+
+
         <classes>
-            <class name="testcases.HomepageTest"/>
+            <class name="testcases.HomepageTest">
+                <methods>
+                    <exclude name="scrolPageTest"/>
+                </methods>
+            </class>
              <class name="testcustomerfunc.MyAccountTest"/>
             <class name="testcustomerfunc.SignInTest"/>
             <class name="testcases.SearchIteamByExcelTest"/>
             <class name="testseachItem.SearchBarTest"/>
-            <class name="testcases.GoogleExcellSheetTest"/>
+
             <class name="testcases.DepartmentTest"/>
         </classes>
-    </test>
 
+    </test>
+<test name="HomeDepot Test2">
+    <classes>
+    <class name="testcases.GoogleExcellSheetTest"/>
+    </classes>
+</test>
 </suite>
 
 

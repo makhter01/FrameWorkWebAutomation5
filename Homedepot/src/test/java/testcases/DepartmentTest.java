@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 public class DepartmentTest extends AllDepartments {
       AllDepartments objDepart;
         Home objHome;
-        @BeforeMethod
+        @BeforeMethod(groups = {"smoke test"})
       public void initials(){
           objDepart= PageFactory.initElements(driver,AllDepartments.class);
           }
 
-          @Test(enabled = true)
+          @Test
           public void departmentTest()throws InterruptedException{
             objDepart.MousehoverActions(driver);
        }

@@ -8,7 +8,7 @@ import java.io.IOException;
 public class FeaturesTest extends Features {
     @Test
     public void testFeatures() throws IOException {
-        selectFeatures();
+        //selectFeatures();
     }
 
 }

@@ -41,7 +41,7 @@ public class SearchPage extends CommonAPI {
         getSearchInputWebElement().clear();
     }
 
-    public void searchItemsAndSubmitButton() throws IOException {
+   /* public void searchItemsAndSubmitButton() throws IOException {
         TestLogger.log(getClass().getSimpleName() + ": " + (new Object() {
         }.getClass().getEnclosingMethod().getName()));
         IteamsToBeSearch searchByIteam = new IteamsToBeSearch();
@@ -51,6 +51,6 @@ public class SearchPage extends CommonAPI {
             submitSearchButton();
             clearInput();
         }
-    }
+    }*/
 
 }
