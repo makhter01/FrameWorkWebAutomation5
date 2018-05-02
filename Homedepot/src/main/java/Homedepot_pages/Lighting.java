@@ -10,8 +10,8 @@ public class Lighting  {
 
 
 
-    public String getlightingHeader(){
+    public void getlightingHeader(){
        String text= lightingHeader.getText();
-       return text;
+        System.out.println(text);
        }
 }
