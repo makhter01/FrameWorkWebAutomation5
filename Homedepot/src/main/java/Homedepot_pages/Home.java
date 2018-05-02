@@ -99,10 +99,6 @@ public class Home extends CommonAPI {
         return giftcard;
     }
 
-    public boolean verifyCreditCard() {
-        boolean creditCard = creditServices.isEnabled();
-        return creditCard;
-    }
 
     public boolean verifyMylist() {
         boolean mylist = creditServices.isEnabled();
