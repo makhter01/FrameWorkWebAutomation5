@@ -33,7 +33,7 @@ public class alert{
     public void test2()throws Exception{
         driver.findElement(By.cssSelector("span#button2>p")).click();
         String parentwindow=driver.getWindowHandle();
-        Thread.sleep(500);
+        Thread.sleep(200);
          for(String handle:driver.getWindowHandles()){
              driver.switchTo().window(handle);
 
